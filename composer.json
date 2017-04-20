@@ -1,0 +1,20 @@
+{
+	"name": "lambirou/babiphp",
+    "description": "The flexible PHP Framework",
+    "keywords": ["lambirou", "babiphp"],
+    "type": "framework",
+	"homepage": "https://github.com/lambirou/babiphp",
+	"license": "GNU LESSER GENERAL PUBLIC LICENSE",
+	"authors": [
+        {
+            "name": "Lambirou",
+            "homepage": "https://iam.lambirou.tk"
+        }
+    ],
+    "require": {
+    	"php": ">=5.5"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
