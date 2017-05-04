@@ -1,12 +1,16 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
 The flexible PHP Framework
 
-[![Author](https://img.shields.io/badge/author-@lambirou225-blue.svg?style=flat-square)](https://twitter.com/lambirou225)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Packagist Version](https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square)](https://packagist.org/packageslambirou/babiphp)
 [![Total Downloads](https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square)](https://packagist.org/packages/lambirou/babiphp)
+
+<p align="center">
+<a href="https://twitter.com/lambirou225"><img src="https://img.shields.io/badge/author-@lambirou225-blue.svg?style=flat-square" alt="Author"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
 
@@ -21,7 +25,7 @@ BabiPHP est un Framework de développement d'applications - un toolkit (trousse 
 La version 5.6.4 ou plus récente de PHP est recommandée.
 
 
-Installation
+## Installation
 
 ### Installer via composer:
 
