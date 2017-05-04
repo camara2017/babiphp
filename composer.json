@@ -4,7 +4,7 @@
     "keywords": ["lambirou", "babiphp"],
     "type": "framework",
 	"homepage": "https://babiphp.lambirou.io",
-	"license": "MIT",
+	"license": "LAMBIROU COMMON LICENSE",
     "support": {
         "issues": "https://github.com/lambirou/babiphp/issues",
         "source": "https://github.com/lambirou/babiphp"
