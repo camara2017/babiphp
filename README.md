@@ -34,11 +34,10 @@ composer require lambirou/babiphp
 
 #### Installation manuelle:
 
-En quatre étapes:
-
 <ol>
+<li>Téléchargez l'archive de [BabiPHP](https://github.com/lambirou/babiphp/archive/master.zip).</li>
 <li>Décompressez le paquet.</li>
-<li>Téléchargez les dossiers et les fichiers BabiPHP sur votre serveur.</li>
+<li>Téléchargez les dossiers et les fichiers de l'archive sur votre serveur.</li>
 <li>Ouvrez le fichier <i>app/config/Config.php</i> avec un éditeur de texte et définissez votre URL de base.</li>
 <li>Si vous avez l'intention d'utiliser un chiffrement ou de gérer des utilisateurs, définissez votre clé de cryptage en éditant le fichier <i>app/config/Security.php</i>.</li>
 <li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
@@ -50,7 +49,7 @@ Une mesure supplémentaire à prendre dans les environnements de production est 
 
 C'est tout!
 
-Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>docs/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques. Prendrez plaisir!
+Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>docs/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques.
 
 <br>
 
