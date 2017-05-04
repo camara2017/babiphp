@@ -1,16 +1,13 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-The flexible PHP Framework
-
-[![Packagist Version](https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square)](https://packagist.org/packageslambirou/babiphp)
-[![Total Downloads](https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square)](https://packagist.org/packages/lambirou/babiphp)
+<p align="center">The flexible PHP Framework</p>
 
 <p align="center">
 <a href="https://twitter.com/lambirou225"><img src="https://img.shields.io/badge/author-@lambirou225-blue.svg?style=flat-square" alt="Author"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://poser.pugx.org/lambirou/babiphp/v/stable.svg?style=flat-square" alt="Latest Stable Version"></a>
 </p>
 
 
