@@ -35,7 +35,7 @@ composer require lambirou/babiphp
 #### Installation manuelle:
 
 <ol>
-<li>Téléchargez l'archive de [BabiPHP](https://github.com/lambirou/babiphp/archive/master.zip).</li>
+<li>Téléchargez l'archive de <a href="https://github.com/lambirou/babiphp/archive/master.zip">BabiPHP</a>.</li>
 <li>Décompressez le paquet.</li>
 <li>Téléchargez les dossiers et les fichiers de l'archive sur votre serveur.</li>
 <li>Ouvrez le fichier <i>app/config/Config.php</i> avec un éditeur de texte et définissez votre URL de base.</li>
