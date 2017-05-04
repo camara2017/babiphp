@@ -66,6 +66,12 @@ Une fois que vous comprenez les bases, vous serez en mesure d'explorer les pages
 
 <br>
 
+## Vulnérabilités de sécurité
+
+Si vous découvrez une vulnérabilité de sécurité au sein de BabiPHP, veuillez envoyer un courrier électronique à Roland Edi à contact.lambirou@gmail.com. Toutes les vulnérabilités de sécurité seront traitées rapidement.
+
+<br>
+
 ## License
 
 Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/master/docs/license.rst).
