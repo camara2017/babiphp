@@ -7,7 +7,7 @@
 <a href="https://github.com/lambirou/babiphp/blob/master/docs/license.rst"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://poser.pugx.org/laravel/framework/v/stable-blue.svg?style=flat-square" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg?style=flat-square" alt="Latest Stable Version"></a>
 </p>
 
 <br>
@@ -41,7 +41,7 @@ En quatre étapes:
 <li>Téléchargez les dossiers et les fichiers BabiPHP sur votre serveur.</li>
 <li>Ouvrez le fichier <i>app/config/Config.php</i> avec un éditeur de texte et définissez votre URL de base.</li>
 <li>Si vous avez l'intention d'utiliser un chiffrement ou de gérer des utilisateurs, définissez votre clé de cryptage en éditant le fichier <i>app/config/Security.php</i>.</li>
-<li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier app/config/Database.php avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
+<li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
 </ol>
 
 Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
@@ -50,7 +50,7 @@ Une mesure supplémentaire à prendre dans les environnements de production est 
 
 C'est tout!
 
-Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>doc/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques. Prendrez plaisir!
+Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>docs/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques. Prendrez plaisir!
 
 <br>
 
