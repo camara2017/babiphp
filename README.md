@@ -86,10 +86,10 @@ Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/maste
 
 ## Reconnaissance
 
-L'équipe BabiPHP tient à remercier tous les contributeurs au projet BabiPHP et vous, l'utilisateur de BabiPHP.
+L'équipe BabiPHP tient à remercier tous les contributeurs au projet et vous, l'utilisateur de BabiPHP.
 
 <br>
 
 <p align="center">
-<i>BabiPHP : The Framework Made in Babi (Abidjan)</i>
+<i>BabiPHP : The Framework Made in Babi (Abidjan) !</i>
 </p>
