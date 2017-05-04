@@ -6,8 +6,8 @@
 <a href="https://twitter.com/lambirou225"><img src="https://img.shields.io/badge/author-@lambirou225-blue.svg?style=flat-square" alt="Author"></a>
 <a href="https://github.com/lambirou/babiphp/blob/master/docs/license.rst"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
-<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
 <a href="https://lambirou.github.io/babiphp"><img src="https://poser.pugx.org/lambirou/babiphp/v/stable.svg?style=flat-square" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
 </p>
 
 <br>
@@ -66,6 +66,12 @@ Une fois que vous comprenez les bases, vous serez en mesure d'explorer les pages
 
 <br>
 
+## Journal des modifications et Nouvelles fonctionnalités
+
+Vous pouvez trouver une liste de toutes les modifications pour chaque version dans le <a href="https://github.com/lambirou/babiphp/blob/master/docs/changelog.rst">journal des modifications</a> du guide de l'utilisateur.
+
+<br>
+
 ## Vulnérabilités de sécurité
 
 Si vous découvrez une vulnérabilité de sécurité au sein de BabiPHP, veuillez envoyer un courrier électronique à Roland Edi à contact.lambirou@gmail.com. Toutes les vulnérabilités de sécurité seront traitées rapidement.
@@ -76,3 +82,14 @@ Si vous découvrez une vulnérabilité de sécurité au sein de BabiPHP, veuille
 
 Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/master/docs/license.rst).
 
+<br>
+
+## Reconnaissance
+
+L'équipe BabiPHP tient à remercier tous les contributeurs au projet BabiPHP et vous, l'utilisateur de BabiPHP.
+
+<br>
+
+<p align="center">
+<i>BabiPHP : The Framework Made in Babi (Abidjan)</i>
+</p>
