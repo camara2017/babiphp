@@ -34,8 +34,34 @@ composer require lambirou/babiphp
 
 #### Installation manuelle:
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+En quatre étapes:
+
+<ol>
+<li>Décompressez le paquet.</li>
+<li>Téléchargez les dossiers et les fichiers CodeIgniter sur votre serveur. Normalement , le index.php fichier sera à votre racine.</li>
+<li>Ouvrez le fichier application / config / config.php avec un éditeur de texte et définissez votre URL de base. Si vous avez l'intention d'utiliser un chiffrement ou des sessions, définissez votre clé de cryptage.</li>
+<li>Si vous avez l' intention d'utiliser une base de données, ouvrez le fichier application / config / database.php avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
+<ol>
+
+Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
+
+Une mesure supplémentaire à prendre dans les environnements de production est de désactiver les rapports d'erreur PHP et toute autre fonctionnalité de développement. Dans BabiPHP, cela peut se faire en suivant les configurations décrites sur la page de sécurité .
+
+C'est tout!
+
+Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>doc/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques. Prendrez plaisir!
+
+<br>
+
+## Mise en route de BabiPHP
+
+Toute application logicielle nécessite des efforts d'apprentissage. Nous avons fait de notre mieux pour minimiser le processus en le rendant aussi agréable que possible.
+
+La première étape consiste à installer BabiPHP, alors lisez le sujet sur l'installation dans la section ci-dessus.
+
+Ensuite, lisez chaque page des sujets généraux dans l'ordre. Chaque sujet s'appuie sur le précédent, et comprend des exemples de code que vous êtes encouragés à essayer.
+
+Une fois que vous comprenez les bases, vous serez en mesure d'explorer les pages de référence de classe et de référence d'aide pour apprendre à utiliser les différentes bibliothèques.
 
 <br>
 
