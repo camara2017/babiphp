@@ -40,8 +40,8 @@ Créer un fichier <i>.htaccess</i> à la racine du serveur, ensuite ouvrez le av
 <IfModule mod_rewrite.c>
 
 RewriteEngine on
-    RewriteRule ^$ vendor/lambirou/babiphp/     [L]
-    RewriteRule (.*) vendor/lambirou/babiphp/$1 [L]
+RewriteRule ^$ vendor/lambirou/babiphp/     [L]
+RewriteRule (.*) vendor/lambirou/babiphp/$1 [L]
 
 </IfModule>
 ```
