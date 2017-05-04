@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?php echo e($page->title); ?></title>
+		<meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Lambirou">
+        <link rel="icon" href="<?php echo e(asset('img/favicon.png')); ?>">
+		
+        <link rel="stylesheet" href="<?php echo e(asset('css/bootstrap.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/font-awesome.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/perfect-scrollbar.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/superslides.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/build.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/intlTelInput.css')); ?>">
+
+        <!--  Android 5 Chrome Color -->
+        <meta name="theme-color" content="#577C1F">
+	</head>
+	<body>
+		<?php echo $__env->make('global/nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		<div class="sms-navigation">
+			<div class="bottom-nav sms-next fa fa-angle-down" data-toggle="tooltip" data-placement="top" title="Vers le bas"></div>
+			<div class="bottom-nav sms-prev fa fa-angle-up" data-toggle="tooltip" data-placement="top" title="Vers le haut"></div>
+		</div>
+
+		<div class="sms-container-home">
+			<div class="section section-home">
+				<div class="home-slides">
+					<ul class="slides-container">
+						<li>
+							<img src="<?php echo e(asset('img/slide-1.png')); ?>">
+							<div class="caption">
+								Le savez-vous ?<br>
+								Vos campagnes SMS<br>
+								ont un taux de réussite de<br>
+								<span class="big">97%</span>
+							</div>
+						</li>
+						<li>
+							<img src="<?php echo e(asset('img/slide-2.jpg')); ?>">
+							<div class="caption">
+								Le savez-vous ?<br>
+								Vos campagnes SMS<br>
+								ont un taux de réussite de<br>
+								<span class="big">97%</span>
+							</div>
+						</li>
+						<li>
+							<img src="<?php echo e(asset('img/slide-3.png')); ?>">
+							<div class="caption">
+								Le savez-vous ?<br>
+								Vos campagnes SMS<br>
+								ont un taux de réussite de<br>
+								<span class="big">97%</span>
+							</div>
+						</li>
+						<li>
+							<img src="<?php echo e(asset('img/slide-4.jpg')); ?>">
+							<div class="caption">
+								Le savez-vous ?<br>
+								Vos campagnes SMS<br>
+								ont un taux de réussite de<br>
+								<span class="big">97%</span>
+							</div>
+						</li>
+					</ul>
+					<nav class="slides-navigation">
+						<a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+						<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="section section-two">
+				<div class="section-margin">
+					<div class="container section-container">
+						<div class="content-left">
+							<i class="fa fa-comments"></i>
+						</div>
+						<div class="content-right">
+							<h3 class="section-title"><?php echo e(__e('Campagnes SMS')); ?></h3>
+							<p class="description">
+								<?php echo e(__e('Réalisez vos campagnes SMS en quelques clics. Importez vos contacts, rédigez votre SMS publicitaire, envoyez et suivez vos statistiques en temps réel !')); ?>
+
+							</p>
+							<p class="description">
+								<?php echo e(__e('Ventes privées, Soldes, Promotions, fidélisez vos clients et augmentez votre trafic en magasin.')); ?>
+
+							</p>
+							<img src="<?php echo e(asset('img/hand-megaphone.png')); ?>" class="bottom-image">
+							<a href="#"><button type="button" class="readmore-btn"><?php echo e(__e('Savoir Plus')); ?></button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section section-three">
+				<div class="section-margin">
+					<div class="container section-container">
+						<div class="content-left">
+							<i class="fa fa-mobile"></i>
+						</div>
+						<div class="content-right">
+							<h3 class="section-title">App Mobile SMS</h3>
+							<p class="description">
+								<?php echo e(__e('Réalisez vos campagnes SMS en quelques clics. Importez vos contacts, rédigez votre SMS publicitaire, envoyez et suivez vos statistiques en temps réel !')); ?>
+
+							</p>
+							<p class="description">
+								<?php echo e(__e('Ventes privées, Soldes, Promotions, fidélisez vos clients et augmentez votre trafic en magasin.')); ?>
+
+							</p>
+							<img src="<?php echo e(asset('img/hand-phone.png')); ?>" class="bottom-image">
+							<a href="#"><button type="button" class="readmore-btn"><?php echo e(__e('Savoir Plus')); ?></button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section section-four">
+				<div class="section-margin">
+					<div class="container section-container">
+						<div class="content-left">
+							<i class="fa fa-cog"></i>
+						</div>
+						<div class="content-right">
+							<h3 class="section-title">Api SMS</h3>
+							<p class="description">
+								<?php echo e(__e('Réalisez vos campagnes SMS en quelques clics. Importez vos contacts, rédigez votre SMS publicitaire, envoyez et suivez vos statistiques en temps réel !')); ?>
+
+							</p>
+							<p class="description">
+								<?php echo e(__e('Ventes privées, Soldes, Promotions, fidélisez vos clients et augmentez votre trafic en magasin.')); ?>
+
+							</p>
+							<img src="<?php echo e(asset('img/hand-computer.png')); ?>" class="bottom-image">
+							<a href="#"><button type="button" class="readmore-btn"><?php echo e(__e('Savoir Plus')); ?></button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section section-five">
+				<div class="section-margin">
+					<div class="container section-container">
+						<div class="content-left">
+							<i class="fa fa-cloud"></i>
+						</div>
+						<div class="content-right">
+							<h3 class="section-title"><?php echo e(__e('Tarifs SMS')); ?></h3>
+							<p class="description">
+								<?php echo e(__e('Réalisez vos campagnes SMS en quelques clics. Importez vos contacts, rédigez votre SMS publicitaire, envoyez et suivez vos statistiques en temps réel !')); ?>
+
+							</p>
+							<p class="description">
+								<?php echo e(__e('Ventes privées, Soldes, Promotions, fidélisez vos clients et augmentez votre trafic en magasin.')); ?>
+
+							</p>
+							<img src="<?php echo e(asset('img/hand-card.png')); ?>" class="bottom-image">
+							<a href="#"><button type="button" class="readmore-btn"><?php echo e(__e('Savoir Plus')); ?></button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section section-six">
+				<div class="section-margin">
+					<div class="top-box">
+						<div class="container">
+							<h2>SmsPresto</h2>
+							<h4><?php echo e(__e('La plateforme idéale pour vos SMS')); ?></h4>
+						</div>
+					</div>
+					<div class="body-box">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="left-side">
+										<div class="icon"><i class="fa fa-send"></i></div>
+									</div>
+									<div class="right-side">
+										<h3 class="title"><?php echo e(__e('Taux de lecture')); ?></h3>
+										<div class="content">
+											<?php echo e(__e('Avec plus de 97% de messages lus, le SMS est le canal de communication qui offre le meilleur taux d’ouverture !')); ?>
+
+										</div>
+										<div class="readmore"><a href="#"><?php echo e(__e('En savoir +')); ?></a></div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="left-side">
+										<div class="icon"><i class="fa fa-flash"></i></div>
+									</div>
+									<div class="right-side">
+										<h3 class="title"><?php echo e(__e('Rapidité')); ?></h3>
+										<div class="content">
+											<?php echo e(__e('Facile à rédiger (160 caractères), envoyez votre campagne SMS à plusieurs milliers de contacts en quelques minutes !')); ?>
+
+										</div>
+										<div class="readmore"><a href="#"><?php echo e(__e('En savoir +')); ?></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="left-side">
+										<div class="icon"><i class="fa fa-users"></i></div>
+									</div>
+									<div class="right-side">
+										<h3 class="title"><?php echo e(__e('100% des contacts')); ?></h3>
+										<div class="content">
+											<?php echo e(__e('Quel que soit le mobile de votre destinataire, le SMS sera toujours compatible et lisible. De plus il n’existe pas de filtre anti-spam sur mobile !')); ?>
+
+										</div>
+										<div class="readmore"><a href="#"><?php echo e(__e('En savoir +')); ?></a></div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<div class="left-side">
+										<div class="icon"><i class="fa fa-shield"></i></div>
+									</div>
+									<div class="right-side">
+										<h3 class="title"><?php echo e(__e('Impact')); ?></h3>
+										<div class="content">
+											<?php echo e(__e('Le marketing SMS est l’outil de promotion préféré des annonceurs avec un taux de retour 5x plus important qu’un e-mailing !')); ?>
+
+										</div>
+										<div class="readmore"><a href="#"><?php echo e(__e('En savoir +')); ?></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section section-footer">
+				<div class="section-margin">
+					<div class="container">
+						<div class="footer-top">
+							<div class="cell">
+								<img src="<?php echo e(asset('img/logo.png')); ?>" alt="<?php echo e(config('name')); ?>">
+							</div>
+							<div class="cell">
+								<h3><?php echo e(__e('Services')); ?></h3>
+							</div>
+							<div class="cell">
+								<h3><?php echo e(__e('Tarifs')); ?></h3>
+							</div>
+							<div class="cell">
+								<h3><?php echo e(__e('Contacts')); ?></h3>
+							</div>
+							<div class="cell">
+								<h3><?php echo e(__e('Connexion')); ?></h3>
+							</div>
+						</div>
+						<div class="footer-bottom">
+							<h2>ONIRIS</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<?php echo $__env->make('modal_layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		<script src="<?php echo e(asset('js/vendor/jquery.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/bootstrap.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery.fullpage.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery.superslides.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery.fittext.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery.lettering.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery.textillate.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/jquery-confirm.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/nprogress.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/perfect-scrollbar.jquery.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/intlTelInput.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/vendor/icheck.min.js')); ?>"></script>
+		<script>window.base_url = <?=json_encode(url())?></script>
+		<script src="<?php echo e(asset('js/app.js')); ?>"></script>
+		<script src="<?php echo e(asset('js/home.js')); ?>"></script>
+	</body>
+</html>

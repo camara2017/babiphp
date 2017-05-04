@@ -1,0 +1,41 @@
+{
+	"driver": "mysql",
+	"name": "okkohi_bdd",
+	"charset": "utf-8",
+	"prefix": "okh_",
+	"tables": {
+		"users": {
+			"fields": {
+				"id": [{"type": "integer", "required": "true", "primary-key": "true", "auto-increment": "true"}],
+				"created": [{"type": "datetime", "required": "true"}],
+				"updated": [{"type": "datetime"}],
+				"username": [{"type": "varchar", "size": "45"}],
+				"password": [{"type": "varchar", "size": "255"}],
+				"email": [{"type": "varchar", "size": "255", "required": "true"}],
+				"role": [{"type": "enum", "value": "0|1", "default": "0", "required": "true"}],
+				"verified": [{"type": "enum", "value": "0|1", "default": "0", "required": "true"}],
+				"firstname": [{"type": "varchar", "size": "255", "required": "true"}],
+				"lastname": [{"type": "varchar", "size": "255", "required": "true"}],
+				"name": [{"type": "varchar", "size": "255", "required": "true"}],
+				"gender": [{"type": "enum", "value": "male|female", "required": "true"}],
+				"birthdate": [{"type": "date"}],
+				"home": [{"type": "varchar", "size": "255", "required": "true"}],
+				"hometown": [{"type": "varchar", "size": "255"}],
+				"job": [{"type": "text"}],
+				"locale": [{"type": "varchar", "size": "5", "required": "true"}],
+				"phone": [{"type": "varchar", "size": "255"}],
+				"picture": [{"type": "text"}],
+				"cover": [{"type": "text"}],
+				"last_visit": [{"type": "datetime"}],
+				"ip": [{"type": "varchar", "size": "15"}],
+				"online": [{"type": "enum", "value": "0|1", "default": "0"}]
+			},
+			"unique": {
+				"email": "email_UNIQUE",
+				"username": "username_UNIQUE"
+			},
+			"engine": "InnoDB",
+			"charset": "utf-8"
+		}
+	}
+}

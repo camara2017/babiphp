@@ -13,15 +13,15 @@
 * @license       http://www.gnu.org/licenses/ GNU License
 */
 
-	require_once __DIR__.'/system/Bootstrap.php';
+    use BabiPHP\Core\Application;
+
+    require_once __DIR__.'/system/Bootstrap.php';
 
 	// register autoloader class
-	\BabiPHP\Core\Application::registerAutoloader();
+	Application::registerAutoloader();
 
 	// Instantiate a BabiPHP application
-	$app = new \BabiPHP\Core\Application();
+	$app = new Application();
 
 	// Run application
 	$app->run();
-
-?>
