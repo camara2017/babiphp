@@ -14,7 +14,7 @@
 
 ## Qu'est-ce que BabiPHP?
 
-BabiPHP est un Framework de développement d'applications - un toolkit (trousse à outils) - pour les personnes qui créent des sites Web en PHP. Accessible, mais puissant, fournissant des outils nécessaires aux applications grosses et robustes. Son objectif est de vous permettre de développer des projets beaucoup plus rapidement que lorsque vous écrivez un code à partir de zéro, en fournissant un ensemble de bibliothèques enrichis pour les tâches requises, ainsi qu'une interface simple et une structure logique pour accéder à ces bibliothèques. BabiPHP permet de vous concentrer de manière créative sur votre projet en minimisant la quantité de code nécessaire pour une tâche donnée.
+BabiPHP est un Framework de développement d'applications - un <i>toolkit</i> (trousse à outils) - pour les personnes qui créent des sites Web en PHP. Accessible, mais puissant, fournissant des outils nécessaires aux applications grosses et robustes. Son objectif est de vous permettre de développer des projets beaucoup plus rapidement que lorsque vous écrivez un code à partir de zéro, en fournissant un ensemble de bibliothèques enrichis pour les tâches requises, ainsi qu'une interface simple et une structure logique pour accéder à ces bibliothèques. BabiPHP permet de vous concentrer de manière créative sur votre projet en minimisant la quantité de code nécessaire pour une tâche donnée.
 
 <br>
 
@@ -57,7 +57,7 @@ Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'
 
 Toute application logicielle nécessite des efforts d'apprentissage. Nous avons fait de notre mieux pour minimiser le processus en le rendant aussi agréable que possible.
 
-La première étape consiste à installer BabiPHP, alors lisez le sujet sur l'installation dans la section ci-dessus.
+BabiPHP est framework <i>ready-to-use</i> (prêt à l'emploi) L'étape majeure consiste donc à l'installer, alors lisez le sujet sur l'installation dans la section ci-dessus.
 
 Ensuite, lisez chaque page des sujets généraux dans l'ordre. Chaque sujet s'appuie sur le précédent, et comprend des exemples de code que vous êtes encouragés à essayer.
 
