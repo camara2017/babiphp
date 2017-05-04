@@ -3,18 +3,28 @@
     "description": "The flexible PHP Framework",
     "keywords": ["lambirou", "babiphp"],
     "type": "framework",
-	"homepage": "https://github.com/lambirou/babiphp",
-	"license": "GNU LESSER GENERAL PUBLIC LICENSE",
+	"homepage": "https://babiphp.lambirou.io",
+	"license": "MIT",
+    "support": {
+        "issues": "https://github.com/lambirou/babiphp/issues",
+        "source": "https://github.com/lambirou/babiphp"
+    },
 	"authors": [
         {
             "name": "Lambirou",
-            "homepage": "https://iam.lambirou.tk"
+            "email": "taylor@lambirou.io",
+            "homepage": "https://iam.lambirou.io"
         }
     ],
     "require": {
-    	"php": ">=5.5"
+    	"php": ">=5.6.4"
     },
     "config": {
         "vendor-dir": "vendor"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.8.8-dev"
+        }
     }
 }
