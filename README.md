@@ -41,7 +41,7 @@ En quatre étapes:
 <li>Téléchargez les dossiers et les fichiers CodeIgniter sur votre serveur. Normalement , le index.php fichier sera à votre racine.</li>
 <li>Ouvrez le fichier application / config / config.php avec un éditeur de texte et définissez votre URL de base. Si vous avez l'intention d'utiliser un chiffrement ou des sessions, définissez votre clé de cryptage.</li>
 <li>Si vous avez l' intention d'utiliser une base de données, ouvrez le fichier application / config / database.php avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
-<ol>
+</ol>
 
 Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
 
