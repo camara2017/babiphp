@@ -4,10 +4,10 @@
 
 <p align="center">
 <a href="https://twitter.com/lambirou225"><img src="https://img.shields.io/badge/author-@lambirou225-blue.svg?style=flat-square" alt="Author"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
+<a href="https://github.com/lambirou/babiphp/blob/master/docs/license.rst"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/stable/lambirou/babiphp.svg?style=flat-square" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/stable/lambirou/babiphp-blue.svg?style=flat-square" alt="Latest Stable Version"></a>
 </p>
 
 <br>
