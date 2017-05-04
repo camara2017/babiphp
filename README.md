@@ -57,7 +57,7 @@ Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'
 
 Toute application logicielle nécessite des efforts d'apprentissage. Nous avons fait de notre mieux pour minimiser le processus en le rendant aussi agréable que possible.
 
-BabiPHP est framework <i>ready-to-use</i> (prêt à l'emploi) L'étape majeure consiste donc à l'installer, alors lisez le sujet sur l'installation dans la section ci-dessus.
+BabiPHP est framework <i>ready-to-use</i> (prêt à l'emploi), l'étape majeure consiste donc à l'installer, alors lisez le sujet sur l'installation dans la section ci-dessus.
 
 Ensuite, lisez chaque page des sujets généraux dans l'ordre. Chaque sujet s'appuie sur le précédent, et comprend des exemples de code que vous êtes encouragés à essayer.
 
