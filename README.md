@@ -33,7 +33,6 @@ Première étape:
 composer require lambirou/babiphp
 ```
 Seconde étape:
-
 Créer un fichier <i>.htaccess</i> à la racine du serveur, ensuite ouvrez le avec un éditeur de texte et ajoutez y les lignes suivantes:
 
 ```
