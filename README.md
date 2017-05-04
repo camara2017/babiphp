@@ -44,7 +44,7 @@ RewriteRule (.*) vendor/lambirou/babiphp/$1 [L]
 
 </IfModule>
 ```
-Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossier <i>vendor/lambirou/babiphp/</i> à la racine de votre projet et de supprimer tous les fichiers et dossiers déjà présent.
+Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossier <i>vendor/lambirou/babiphp/</i> à la racine de votre projet et de supprimer tous les fichiers et dossiers déjà présent (y compris le fichier <i>.htaccess</i> que vous créer précédement).
 
 #### Installation manuelle:
 
