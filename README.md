@@ -38,9 +38,10 @@ En quatre étapes:
 
 <ol>
 <li>Décompressez le paquet.</li>
-<li>Téléchargez les dossiers et les fichiers CodeIgniter sur votre serveur. Normalement , le index.php fichier sera à votre racine.</li>
-<li>Ouvrez le fichier application / config / config.php avec un éditeur de texte et définissez votre URL de base. Si vous avez l'intention d'utiliser un chiffrement ou des sessions, définissez votre clé de cryptage.</li>
-<li>Si vous avez l' intention d'utiliser une base de données, ouvrez le fichier application / config / database.php avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
+<li>Téléchargez les dossiers et les fichiers BabiPHP sur votre serveur.</li>
+<li>Ouvrez le fichier <i>app/config/Config.php</i> avec un éditeur de texte et définissez votre URL de base.</li>
+<li>Si vous avez l'intention d'utiliser un chiffrement ou de gérer des utilisateurs, définissez votre clé de cryptage en éditant le fichier <i>app/config/Security.php</i>.</li>
+<li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier app/config/Database.php avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
 </ol>
 
 Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
