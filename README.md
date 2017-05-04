@@ -10,7 +10,7 @@ The flexible PHP Framework
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/v/lambirou/babiphp.svg?style=flat-square" alt="Packagist Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
 </p>
 
 
