@@ -16,24 +16,28 @@
 
 BabiPHP est un Framework de développement d'applications - un toolkit (trousse à outils) - pour les personnes qui créent des sites Web en PHP. Son objectif est de vous permettre de développer des projets beaucoup plus rapidement que lorsque vous écrivez un code à partir de zéro, en fournissant un ensemble de bibliothèques enrichis pour les tâches généralement requises, ainsi qu'une interface simple et une structure logique pour accéder à ces bibliothèques. BabiPHP permet de vous concentrer de manière créative sur votre projet en minimisant la quantité de code nécessaire pour une tâche donnée.
 
+<br>
+
 ## Exigences du serveur
 
 La version 5.6.4 ou plus récente de PHP est recommandée.
 
+<br>
 
 ## Installation
 
-### Installer via composer:
+#### Installer via composer:
 
 ```
 composer require lambirou/babiphp
 ```
 
-### Installation manuelle:
+#### Installation manuelle:
 
 Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
 of the CodeIgniter User Guide.
 
+<br>
 
 ## License
 
