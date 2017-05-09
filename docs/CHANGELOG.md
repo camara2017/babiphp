@@ -1,5 +1,6 @@
 Version 0.8.9 - Release Date: Non sorti
 -----------------------------------------------------------------------------------------
+- changement de license pour (The MIT License (<a href="https://github.com/lambirou/babiphp/blob/master/docs/LICENSE.md">MIT</a>))
 - renommage du namespace <i>\BabiPHP\Component\Utility</i> en <i>\BabiPHP\Component\Misc</i>
 - renommage de la class <i>\BabiPHP\Component\Locale</i> en <i>\BabiPHP\Component\Translation</i>
 - correction du problème de header already send
