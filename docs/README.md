@@ -81,7 +81,7 @@ Une fois que vous comprenez les bases, vous serez en mesure d'explorer les pages
 
 ## Journal des modifications et Nouvelles fonctionnalités
 
-Vous pouvez trouver une liste de toutes les modifications pour chaque version dans le <a href="https://github.com/lambirou/babiphp/blob/master/docs/changelog.rst">journal des modifications</a> du guide de l'utilisateur.
+Vous pouvez trouver une liste de toutes les modifications pour chaque version dans le <a href="https://github.com/lambirou/babiphp/blob/master/docs/CHANGELOG.md">journal des modifications</a> du guide de l'utilisateur.
 
 <br>
 
@@ -93,7 +93,7 @@ Si vous découvrez une vulnérabilité de sécurité au sein de BabiPHP, veuille
 
 ## License
 
-Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/master/docs/license.rst).
+Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/master/docs/LICENSE.md).
 
 <br>
 
