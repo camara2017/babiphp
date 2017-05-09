@@ -11,5 +11,5 @@
 - Accessible, mais puissant
 
 [GitHub](https://github.com/lambirou/lambirou/)
-[Get Started](#docsify)
+[Get Started](#qu39est-ce-que-babiphp)
 [Télécharger](https://github.com/lambirou/babiphp/archive/master.zip)

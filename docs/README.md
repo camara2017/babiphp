@@ -91,8 +91,8 @@ L'équipe BabiPHP tient à remercier tous les contributeurs au projet et vous, l
 
 ## Télécharger
 
-[Archive zip](https://github.com/lambirou/babiphp/archive/master.zip)
-[Archive tar.gz](https://github.com/lambirou/babiphp/archive/master.tar.gz)
+[ [Archive zip](https://github.com/lambirou/babiphp/archive/master.zip) ] - 
+[ [Archive tar.gz](https://github.com/lambirou/babiphp/archive/master.tar.gz) ]
 
 <br>
 
