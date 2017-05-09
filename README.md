@@ -7,7 +7,7 @@
 <a href="https://github.com/lambirou/babiphp/blob/master/docs/license.rst"><img src="https://img.shields.io/badge/license-LCL-brightgreen.svg?style=flat-square" alt="Software License"></a>
 <a href="https://lambirou.github.io/babiphp"><img src="https://poser.pugx.org/lambirou/babiphp/v/stable.svg?style=flat-square" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/lambirou/babiphp#dev-master"><img src="https://poser.pugx.org/lambirou/babiphp/v/unstable.svg?style=flat-square" alt="Latest Unstable Version"></a>
-<a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a>
+<!-- <a href="https://packagist.org/packages/lambirou/babiphp"><img src="https://img.shields.io/packagist/dt/lambirou/babiphp.svg?style=flat-square" alt="Total Downloads"></a> -->
 </p>
 
 <br>
