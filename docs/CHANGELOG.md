@@ -8,10 +8,15 @@ Version 0.8.9 - Release Date: Non sorti
 
 Version 0.8.8 - Release Date: 04 Mai 2017
 -----------------------------------------------------------------------------------------
-- nouvelle class \BabiPHP\Component\Utility\Uploader pour la gestion des uploads de fichier
+- restructuration de la class \BabiPHP\Core\Dispatcher pour une meilleur logique et le support de fonctionnalités avancées
+- ajout de nouvelles fonctionnalités avancées à la class \BabiPHP\Component\Http\Response pour permettre plusieurs types de rendu
+- ajout de la librairie "Moment" \BabiPHP\Component\Date 
+- ajout de la librairie \BabiPHP\Component\Parser\HtmlParser pour la manipulation de HTML
+- ajout de la class \BabiPHP\Component\Parser\MetaParser pour la lecture des balises meta
+- ajout de la class \BabiPHP\Component\Utility\Uploader pour la gestion des uploads de fichier
 - ajout d'un gestionnaire d'erreur avancé (similaire à celui de Laravel)
 - ajout de le configuration générale par defaut
-- prise en charge des methodes HTTP autorisées pour acceder à une page
+- ajout du support des methodes HTTP autorisées pour acceder à une page
 
 Version 0.8.8
 -----------------------------------------------------------------------------------------
