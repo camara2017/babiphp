@@ -1,4 +1,3 @@
------------------------------------------------------------------------------------------
 Version 0.8.9 - Release Date: Not Released
 -----------------------------------------------------------------------------------------
 - renommage du namespace \BabiPHP\Component\Utility en \BabiPHP\Component\Misc
@@ -6,7 +5,7 @@ Version 0.8.9 - Release Date: Not Released
 - correction du problème de header already send
 - ajout de la documentation de Framawork (repertoire /docs)
  
------------------------------------------------------------------------------------------
+
 Version 0.8.8 - Release Date: 04 Mai 2017
 -----------------------------------------------------------------------------------------
 - nouvelle class \BabiPHP\Component\Utility\Uploader pour la gestion des uploads de fichier
