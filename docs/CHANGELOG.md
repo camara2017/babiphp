@@ -1,4 +1,4 @@
-Version 0.8.9 - Release Date: Not Released
+Version 0.8.9 - Release Date: Non sorti
 -----------------------------------------------------------------------------------------
 - renommage du namespace \BabiPHP\Component\Utility en \BabiPHP\Component\Misc
 - renommage de la class \BabiPHP\Component\Locale en \BabiPHP\Component\Translation
