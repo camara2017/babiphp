@@ -51,13 +51,7 @@ Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossi
 <li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
 </ol>
 
-Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
-
-Une mesure supplémentaire à prendre dans les environnements de production est de désactiver les rapports d'erreur PHP et toute autre fonctionnalité de développement. Dans BabiPHP, cela peut se faire en suivant les configurations décrites sur la page de sécurité .
-
-C'est tout!
-
-Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>docs/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques.
+Pour des informations plus detaillés veuillez consulter la <a href="https://lambirou.github.io/babiphp">documentation</a>.
 
 <br>
 
