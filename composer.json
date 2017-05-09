@@ -1,23 +1,21 @@
 {
-	"name": "lambirou/babiphp",
+    "name": "lambirou/babiphp",
     "description": "The flexible PHP Framework",
     "keywords": ["lambirou", "babiphp", "framework", "php", "mvc"],
     "type": "framework",
-	"homepage": "https://lambirou.github.io/babiphp",
-	"license": "LAMBIROU COMMON LICENSE",
+    "homepage": "https://lambirou.github.io/babiphp",
+    "license": "MIT",
     "support": {
         "issues": "https://github.com/lambirou/babiphp/issues",
         "source": "https://github.com/lambirou/babiphp"
     },
-	"authors": [
-        {
-            "name": "Roland Edi",
-            "email": "contact.lambirou@gmail.com",
-            "homepage": "https://lambirou.github.io"
-        }
-    ],
+    "authors": [{
+        "name": "Roland Edi",
+        "email": "contact.lambirou@gmail.com",
+        "homepage": "https://lambirou.github.io"
+    }],
     "require": {
-    	"php": ">=5.6.4"
+        "php": ">=5.6.4"
     },
     "config": {
         "vendor-dir": "vendor"
