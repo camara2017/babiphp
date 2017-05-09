@@ -51,7 +51,7 @@ Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossi
 <li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
 </ol>
 
-Pour des informations plus detaillés veuillez consulter la <a href="https://lambirou.github.io/babiphp">documentation</a>.
+Pour des informations plus detaillés veuillez consulter la <a href="https://lambirou.github.io/babiphp" target="blank">documentation</a>.
 
 <br>
 
