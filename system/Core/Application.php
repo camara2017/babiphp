@@ -21,7 +21,7 @@
 
 	use BabiPHP\Component\Config\Config;
 	use BabiPHP\Component\Routing\Router;
-	use BabiPHP\Component\Utility\Debugbar;
+	use BabiPHP\Component\Misc\Debugbar;
 	use BabiPHP\Component\Database\ConnectionManager;
 	use BabiPHP\Component\Error\Run as ErrorRun;
 	use BabiPHP\Component\Error\Handler\PrettyPageHandler as ErrorPageHandler;

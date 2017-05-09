@@ -18,6 +18,12 @@ BabiPHP est un Framework de développement d'applications - un <i>toolkit</i> (t
 
 <br>
 
+## Exigences du serveur
+
+La version 5.6.4 ou plus récente de PHP est recommandée.
+
+<br>
+
 ## Installation
 
 #### Installer via composer:
@@ -51,10 +57,50 @@ Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossi
 <li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
 </ol>
 
-<br>
-Pour des informations plus detaillés veuillez consulter la <a href="https://lambirou.github.io/babiphp" target="blank">documentation</a>.
+Pour une meilleure sécurité, le système et tous les dossiers de l'application doivent être placés au-dessus de la racine Web afin qu'ils ne soient pas directement accessibles via un navigateur. Par défaut, les fichiers <b>.htaccess</b> sont inclus dans chaque dossier pour empêcher l'accès direct, mais il est préférable de les supprimer de l'accès public entièrement au cas où la configuration du serveur Web changerait ou ne respecterait pas le <b>.htaccess</b>.
+
+Une mesure supplémentaire à prendre dans les environnements de production est de désactiver les rapports d'erreur PHP et toute autre fonctionnalité de développement. Dans BabiPHP, cela peut se faire en suivant les configurations décrites sur la page de sécurité .
+
+C'est tout!
+
+Si vous êtes nouveau sur BabiPHP, lisez la section Mise en route du Guide de l'utilisateur (situé dans le repertoire <b>docs/</b>) pour commencer à apprendre comment créer des applications PHP dynamiques.
 
 <br>
+
+## Mise en route de BabiPHP
+
+Toute application logicielle nécessite des efforts d'apprentissage. Nous avons fait de notre mieux pour minimiser le processus en le rendant aussi agréable que possible.
+
+BabiPHP est framework <i>ready-to-use</i> (prêt à l'emploi), l'étape majeure consiste donc à l'installer, alors lisez le sujet sur l'installation dans la section ci-dessus.
+
+Ensuite, lisez chaque page des sujets généraux dans l'ordre. Chaque sujet s'appuie sur le précédent, et comprend des exemples de code que vous êtes encouragés à essayer.
+
+Une fois que vous comprenez les bases, vous serez en mesure d'explorer les pages de référence de classe et de référence d'aide pour apprendre à utiliser les différentes bibliothèques.
+
+<br>
+
+## Journal des modifications et Nouvelles fonctionnalités
+
+Vous pouvez trouver une liste de toutes les modifications pour chaque version dans le <a href="https://github.com/lambirou/babiphp/blob/master/docs/CHANGELOG.md">journal des modifications</a> du guide de l'utilisateur.
+
+<br>
+
+## Vulnérabilités de sécurité
+
+Si vous découvrez une vulnérabilité de sécurité au sein de BabiPHP, veuillez envoyer un courrier électronique à Roland Edi à contact.lambirou@gmail.com. Toutes les vulnérabilités de sécurité seront traitées rapidement.
+
+<br>
+
+## License
+
+Consultez le [Contrat de Licence](https://github.com/lambirou/babiphp/blob/master/docs/LICENSE.md).
+
+<br>
+
+## Reconnaissance
+
+L'équipe BabiPHP tient à remercier tous les contributeurs au projet et vous, l'utilisateur de BabiPHP.
+
 <br>
 
 <p align="center">

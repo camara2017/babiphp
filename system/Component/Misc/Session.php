@@ -10,7 +10,6 @@
  * @copyright     Copyright (c) BabiPHP. (http://babiphp.org)
  * @author 		  Lambirou <lambirou225@gmail.com>
  * @link          http://babiphp.org BabiPHP Project
- * @package       system.component.utility
  * @since         BabiPHP v 0.3
  * @license       http://www.gnu.org/licenses/ GNU License
  */
@@ -22,7 +21,7 @@
  *
  */
 
-	namespace BabiPHP\Component\Utility;
+	namespace BabiPHP\Component\Misc;
 	
 	use \BabiPHP\Component\Config\Config;
 

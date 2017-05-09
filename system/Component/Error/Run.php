@@ -16,7 +16,7 @@
     use BabiPHP\Component\Error\Util\SystemFacade;
     use BabiPHP\Component\Config\Config;
     use BabiPHP\Component\Http\Request;
-    use BabiPHP\Component\Utility\Debugbar;
+    use BabiPHP\Component\Misc\Debugbar;
 
     final class Run implements RunInterface
     {

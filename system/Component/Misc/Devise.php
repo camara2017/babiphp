@@ -23,7 +23,7 @@
  * Not edit this file
  */
 
-    namespace BabiPHP\Component\Utility;
+    namespace BabiPHP\Component\Misc;
 
 class Devise
 {

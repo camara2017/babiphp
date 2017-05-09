@@ -57,7 +57,7 @@ if($data['hasErrors']){
 
 */
 
-    namespace BabiPHP\Component\Utility;
+    namespace BabiPHP\Component\Misc;
 
     class Uploader
     {

@@ -21,7 +21,7 @@
     namespace BabiPHP\Component\Http;
 
     use BabiPHP\Component\Config\Config;
-    use BabiPHP\Component\Utility\Set;
+    use BabiPHP\Component\Misc\Set;
     use BabiPHP\Component\Exception\BpException;
     use BabiPHP\Component\Http\Collection\DataCollection;
     use BabiPHP\Component\Http\Collection\HeaderDataCollection;

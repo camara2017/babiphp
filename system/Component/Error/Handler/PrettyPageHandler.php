@@ -14,7 +14,7 @@
     use BabiPHP\Component\Error\Exception\Formatter;
     use BabiPHP\Component\Error\Util\Misc;
     use BabiPHP\Component\Error\Util\TemplateHelper;
-    use BabiPHP\Component\Utility\Debugbar;
+    use BabiPHP\Component\Misc\Debugbar;
 
     class PrettyPageHandler extends Handler
     {

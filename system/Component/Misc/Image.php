@@ -9,19 +9,18 @@
  *
  * @copyright     Copyright (c) BabiPHP. (http://babiphp.org)
  * @link          http://babiphp.org BabiPHP Project
- * @package       system.component.utility
  * @since         BabiPHP v 0.8.8
  * @license       http://www.gnu.org/licenses/ GNU License
  */
 
-    namespace BabiPHP\Component\Utility;
+    namespace BabiPHP\Component\Misc;
 
     use BabiPHP\Component\Exception\BpException;
 
     /**
-     * Class BabiPHP\Component\Utility\Image
+     * Class BabiPHP\Component\Misc\Image
      * This class makes image manipulation in PHP as simple as possible.
-     * @package BabiPHP\Component\Utility\Image
+     * @package BabiPHP\Component\Misc\Image
      *
      */
     class Image
@@ -45,7 +44,7 @@
          *                                  Where red, green, blue - integers 0-255, alpha - integer 0-127<br>
          *                                  (is used for creating image from scratch)
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          * @throws BpException
          *
          */
@@ -78,7 +77,7 @@
          * @param int           $width
          * @param int|null      $height If omitted - assumed equal to $width
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function adaptive_resize($width, $height = null) {
@@ -90,7 +89,7 @@
         /**
          * Rotates and/or flips an image automatically so the orientation will be correct (based on exif 'Orientation')
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function auto_orient() {
@@ -143,7 +142,7 @@
          * @param int           $max_width
          * @param int           $max_height
          *
-         * @return  BabiPHP\Component\Utility\Image
+         * @return  BabiPHP\Component\Misc\Image
          *
          */
         function best_fit($max_width, $max_height) {
@@ -181,7 +180,7 @@
          * @param string        $type   selective|gaussian
          * @param int           $passes Number of times to apply the filter
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function blur($type = 'selective', $passes = 1) {
@@ -204,7 +203,7 @@
          *
          * @param int           $level  Darkest = -255, lightest = 255
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function brightness($level) {
@@ -217,7 +216,7 @@
          *
          * @param int           $level  Min = -100, max = 100
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          *
          */
@@ -233,7 +232,7 @@
          *                                  Where red, green, blue - integers 0-255, alpha - integer 0-127
          * @param float|int     $opacity    0-1
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function colorize($color, $opacity) {
@@ -251,7 +250,7 @@
          * @param null|string   $color  Hex color string, array(red, green, blue) or array(red, green, blue, alpha).
          *                              Where red, green, blue - integers 0-255, alpha - integer 0-127
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function create($width, $height = null, $color = null) {
@@ -285,7 +284,7 @@
          * @param int           $x2 Right
          * @param int           $y2 Bottom
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function crop($x1, $y1, $x2, $y2) {
@@ -320,7 +319,7 @@
          *
          * @param int           $percentage Level of desaturization.
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function desaturate($percentage = 100) {
@@ -350,7 +349,7 @@
         /**
          * Edge Detect
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function edges() {
@@ -361,7 +360,7 @@
         /**
          * Emboss
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function emboss() {
@@ -375,7 +374,7 @@
          * @param string        $color  Hex color string, array(red, green, blue) or array(red, green, blue, alpha).
          *                              Where red, green, blue - integers 0-255, alpha - integer 0-127
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function fill($color = '#000000') {
@@ -395,7 +394,7 @@
          *
          * @param int           $height
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function fit_to_height($height) {
@@ -412,7 +411,7 @@
          *
          * @param int           $width
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function fit_to_width($width) {
@@ -429,7 +428,7 @@
          *
          * @param string        $direction  x|y
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function flip($direction) {
@@ -517,7 +516,7 @@
         /**
          * Invert
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function invert() {
@@ -530,7 +529,7 @@
          *
          * @param string        $filename   Path to image file
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          * @throws BpException
          *
          */
@@ -549,7 +548,7 @@
          *
          * @param string        $filename   base64 string
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function load_base64($base64string) {
@@ -565,7 +564,7 @@
         /**
          * Mean Remove
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function mean_remove() {
@@ -719,13 +718,13 @@
          *
          * Overlay an image on top of another, works with 24-bit PNG alpha-transparency
          *
-         * @param string        $overlay        An image filename or a BabiPHP\Component\Utility\Image object
+         * @param string        $overlay        An image filename or a BabiPHP\Component\Misc\Image object
          * @param string        $position       center|top|left|bottom|right|top left|top right|bottom left|bottom right
          * @param float|int     $opacity        Overlay opacity 0-1
          * @param int           $x_offset       Horizontal offset in pixels
          * @param int           $y_offset       Vertical offset in pixels
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function overlay($overlay, $position = 'center', $opacity = 1, $x_offset = 0, $y_offset = 0) {
@@ -791,7 +790,7 @@
          *
          * @param int           $block_size Size in pixels of each resulting block
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function pixelate($block_size = 10) {
@@ -805,7 +804,7 @@
          * @param int   $width
          * @param int   $height
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function resize($width, $height) {
@@ -848,7 +847,7 @@
          * @param string        $bg_color   Hex color string, array(red, green, blue) or array(red, green, blue, alpha).
          *                                  Where red, green, blue - integers 0-255, alpha - integer 0-127
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function rotate($angle, $bg_color = '#000000') {
@@ -878,7 +877,7 @@
          * @param null|int      $quality    Output image quality in percents 0-100
          * @param null|string   $format     The format to use; determined by file extension if null
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          * @throws BpException
          *
          */
@@ -919,7 +918,7 @@
         /**
          * Sepia
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function sepia() {
@@ -931,7 +930,7 @@
         /**
          * Sketch
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function sketch() {
@@ -944,7 +943,7 @@
          *
          * @param int           $level  Min = -10, max = 10
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function smooth($level) {
@@ -963,7 +962,7 @@
          * @param int           $x_offset
          * @param int           $y_offset
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          * @throws BpException
          *
          */
@@ -1043,7 +1042,7 @@
          * @param int           $width
          * @param int|null      $height If omitted - assumed equal to $width
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          *
          */
         function thumbnail($width, $height = null) {
@@ -1092,7 +1091,7 @@
          *
          * @param string|null       $imagestring    If omitted treat as a normal image
          *
-         * @return BabiPHP\Component\Utility\Image
+         * @return BabiPHP\Component\Misc\Image
          * @throws BpException
          *
          */

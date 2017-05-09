@@ -21,10 +21,10 @@
  *
  */
 
-	namespace BabiPHP\Component\Utility;
+	namespace BabiPHP\Component\Misc;
 
-	use BabiPHP\Component\Utility\Set;
-	use BabiPHP\Component\Utility\Session;
+	use BabiPHP\Component\Misc\Set;
+	use BabiPHP\Component\Misc\Session;
 	use BabiPHP\Component\Config\Config;
 
 	class Debugbar
@@ -204,7 +204,7 @@
 		{
 			$ReqDuration = (round(self::getTime() - self::$McTime, 3) * 1000).'ms';
 
-			$assets = COMPONENT.'Utility'.DS.'Ressources'.DS;
+			$assets = COMPONENT.'Ressources'.DS;
 
 			/*$cssFiles = [
 				'fontawesome' => 'css/font-awesome.min.css',
@@ -233,8 +233,7 @@
 	            $icons[$ico] = file_get_contents($assets.'icons'.DS.$ico.'.svg');
 	        }
 
-			$css = trim(file_get_contents($assets.'css'.DS.'font-awesome.min.css'));
-			$css .= trim(file_get_contents($assets.'css'.DS.'simptip.min.css'));
+			$css = trim(file_get_contents($assets.'css'.DS.'simptip.min.css'));
 			$css .= trim(file_get_contents($assets.'css'.DS.'debugbar.css'));
 
 			$jquery = trim(file_get_contents($assets.DS.'js'.DS.'jquery.min.js'));

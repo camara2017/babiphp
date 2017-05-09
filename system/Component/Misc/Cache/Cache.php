@@ -1,6 +1,6 @@
 <?php
 
-    namespace BabiPHP\Component\Utility\Cache;
+    namespace BabiPHP\Component\Misc\Cache;
     
     class Cache
     {

@@ -26,11 +26,11 @@
     use \BabiPHP\Component\Helper\Html;
     use \BabiPHP\Component\Http\Response;
     use \BabiPHP\Component\Locale\Localization;
-    use \BabiPHP\Component\Utility\Session;
-    use \BabiPHP\Component\Utility\Cookie;
-    use \BabiPHP\Component\Utility\Set;
-    use \BabiPHP\Component\Utility\Auth;
-    use \BabiPHP\Component\Utility\Debugbar;
+    use \BabiPHP\Component\Misc\Session;
+    use \BabiPHP\Component\Misc\Cookie;
+    use \BabiPHP\Component\Misc\Set;
+    use \BabiPHP\Component\Misc\Auth;
+    use \BabiPHP\Component\Misc\Debugbar;
     use \BabiPHP\Component\View\Compilers\BladeCompiler as ViewCompiler;
     use \BabiPHP\Component\View\Engines\CompilerEngine as ViewCompilerEngine;
     use \BabiPHP\Component\View\FileViewFinder as ViewFinder;

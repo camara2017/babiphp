@@ -21,7 +21,7 @@
  *
  */
 
-    namespace BabiPHP\Component\Utility;
+    namespace BabiPHP\Component\Misc;
 
     use \BabiPHP\Component\Error\BpException;
     use \BabiPHP\Component\Config\Config;

@@ -18,12 +18,12 @@
 *
 */
 
-	namespace BabiPHP\Component\Utility;
+	namespace BabiPHP\Component\Misc;
 
 	use BabiPHP\Component\Config\Security;
 	use BabiPHP\Component\Config\Config;
     use BabiPHP\Component\Http\Request;
-	use BabiPHP\Component\Utility\Session;
+	use BabiPHP\Component\Misc\Session;
 	
 	class Auth
 	{

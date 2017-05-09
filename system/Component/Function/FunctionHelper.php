@@ -16,8 +16,9 @@
 
 	use \BabiPHP\Component\Config\Config;
 	use \BabiPHP\Component\Routing\Router;
-    use \BabiPHP\Component\Utility\Debugbar;
-    use \BabiPHP\Component\Utility\Date\Moment;
+    use \BabiPHP\Component\Misc\Debugbar;
+    use \BabiPHP\Component\Date\Moment;
+    use \BabiPHP\Component\Exception\BpException;
 
 
 /* Miscellaneous */
@@ -104,7 +105,7 @@ if ( ! function_exists('route'))
 
 		if(!isset($namedRoutes[$routeName])) {
 			Debugbar::addException("Route '{$routeName}' does not exist.");
-			throw new Exception("Route '{$routeName}' does not exist.");
+			throw new BpException("Route '{$routeName}' does not exist.");
 		}
 
 		$route = $namedRoutes[$routeName];

@@ -21,7 +21,7 @@
 *
 */
 
-	namespace BabiPHP\Component\Utility;
+	namespace BabiPHP\Component\Misc;
 
 	class Cookie
 	{

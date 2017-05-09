@@ -20,7 +20,7 @@
  *
  */
 
-	namespace BabiPHP\Component\Utility\Cache\Adapter;
+	namespace BabiPHP\Component\Misc\Cache\Adapter;
 
 	use BabiPHP\Component\Exception\BpException;
 	use \Memcache;

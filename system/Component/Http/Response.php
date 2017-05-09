@@ -24,8 +24,8 @@
     namespace BabiPHP\Component\Http;
 
     use BabiPHP\Component\Config\Config;
-    use BabiPHP\Component\Utility\Set;
-    use BabiPHP\Component\Utility\Debugbar;
+    use BabiPHP\Component\Misc\Set;
+    use BabiPHP\Component\Misc\Debugbar;
     use BabiPHP\Component\Exception\BpException;
     use BabiPHP\Core\Controller;
 
