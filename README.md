@@ -55,6 +55,7 @@ Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossi
 Pour des informations plus detaillés veuillez consulter la <a href="https://lambirou.github.io/babiphp" target="blank">documentation</a>.
 
 <br>
+<br>
 
 <p align="center">
 <i>BabiPHP : The Framework Made in Babi (Abidjan) !</i>
