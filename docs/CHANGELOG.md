@@ -1,10 +1,10 @@
 Version 0.8.9 - Release Date: Non sorti
 -----------------------------------------------------------------------------------------
-- renommage du namespace \BabiPHP\Component\Utility en \BabiPHP\Component\Misc
-- renommage de la class \BabiPHP\Component\Locale en \BabiPHP\Component\Translation
+- renommage du namespace <i>\BabiPHP\Component\Utility</i> en <i>\BabiPHP\Component\Misc</i>
+- renommage de la class <i>\BabiPHP\Component\Locale</i> en <i>\BabiPHP\Component\Translation</i>
 - correction du problème de header already send
-- restructuration de la librairie \BabiPHP\Component\Database pour le support de fonctionnalités avancées
-- restructuration de la class \BabiPHP\Core\Dispatcher pour une meilleur logique et le support de fonctionnalités avancées
+- restructuration de la librairie <i>\BabiPHP\Component\Database</i> pour le support de fonctionnalités avancées
+- restructuration de la class <i>\BabiPHP\Core\Dispatcher</i> pour une meilleur logique et le support de fonctionnalités avancées
 - ajout de la documentation de Framawork (repertoire /docs)
 - ajout de la librairie "Moment" \BabiPHP\Component\Date 
 - ajout de la librairie \BabiPHP\Component\Parser\HtmlParser pour la manipulation de HTML
