@@ -204,29 +204,8 @@
 		{
 			$ReqDuration = (round(self::getTime() - self::$McTime, 3) * 1000).'ms';
 
-			$assets = COMPONENT.'Ressources'.DS;
-
-			/*$cssFiles = [
-				'fontawesome' => 'css/font-awesome.min.css',
-        		'highlightjs' => 'css/highlightjs-github.css',
-        		'highlightjs' => 'css/debugbar.css',
-			];
-
-			$jsFiles = [
-        		'jscript' => 'js/jscript.min.js',
-        		'highlightjs' => 'js/highlight.pack.js',
-				'debugbar' => 'js/debugbar.js'
-			];
-
-			foreach ($cssFiles as $file) {
-	            $html .= sprintf('<link rel="stylesheet" type="text/css" href="%s">' . "\n", $file);
-	        }
-
-	        foreach ($jsFiles as $file) {
-	            $html .= sprintf('<script type="text/javascript" src="%s"></script>' . "\n", $file);
-	        }*/
-
 	        $icons = [];
+			$assets = COMPONENT.'Ressources'.DS;
 	        $icons_name = ['babiphp', 'cogs', 'clock', 'warning', 'user'];
 
 	        foreach ($icons_name as $ico) {
@@ -234,13 +213,11 @@
 	        }
 
 			$css = trim(file_get_contents($assets.'css'.DS.'simptip.min.css'));
-			$css .= trim(file_get_contents($assets.'css'.DS.'debugbar.css'));
+			$css .= trim(file_get_contents($assets.'css'.DS.'debugbar.min.css'));
 
-			$jquery = trim(file_get_contents($assets.DS.'js'.DS.'jquery.min.js'));
-			$jscript = trim(file_get_contents($assets.DS.'js'.DS.'debugbar.js'));
+			$jscript = trim(file_get_contents($assets.'js'.DS.'debugbar.min.js'));
 
 			$output = '<style type="text/css">' . "\n" . $css . "\n</style>";
-			$output .= '<div class="_bp-debug-bar-sup"></div>';
 			$output .= '<div class="_bp-debug-bar" id="bp-debug-bar">';
 			$output .= '<div class="_item">BabiPHP <span class="simptip-position-top simptip-movable simptip-smooth" data-tooltip="BabiPHP">';
 			$output .= '<span class="_bp-bar-badge _bp-bar-badge-info">'.BP_VERSION.' / PHP '.PHP_VERSION.'</span></span></div>';
@@ -259,7 +236,6 @@
 			$output .= '<div class="_item first">'.$icons['user'].' '.self::getAuth().'</div>';
 			$output .= '<div class="_item clickable">Messages <span class="_bp-bar-badge">'.count(self::$messages).'</span></div>';
 			$output .= '<div class="_item clickable">Request</div>';
-			// $output .= '<div class="_item clickable">Config</div>';
 			$output .= '<div class="_item clickable">Exceptions <span class="_bp-bar-badge">'.count(self::$exceptions).'</span></div>';
 			$output .= '<div class="_item clickable">Databases <span class="_bp-bar-badge">'.count(self::$queries).'</span></div>';
 			$output .= '<div class="_item"> '.$icons['cogs'].' '.self::getMemoryUsage().'</div>';
@@ -267,7 +243,6 @@
 			$output .= '<div class="_item last"><div class="_bp-toggle-btn" id="bp-toggle-btn"><span></span></div></div>';
 			$output .= '</div></div>';
 			$output .= '<div class="_bp-debug-content"></div>';
-			$output .= '<script type="text/javascript">' . "\n" . $jquery . "\n</script>";
 			$output .= '<script type="text/javascript">' . "\n" . $jscript . "\n</script>";
 
 			return $output;
