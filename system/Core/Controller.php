@@ -22,10 +22,8 @@
 
     use \BabiPHP\Component\Config\Config;
     use \BabiPHP\Component\Exception\BpException;
-    use \BabiPHP\Component\Helper\Markup;
-    use \BabiPHP\Component\Helper\Html;
     use \BabiPHP\Component\Http\Response;
-    use \BabiPHP\Component\Locale\Localization;
+    use \BabiPHP\Component\Translation\Localization;
     use \BabiPHP\Component\Misc\Session;
     use \BabiPHP\Component\Misc\Cookie;
     use \BabiPHP\Component\Misc\Set;
@@ -180,8 +178,6 @@
             $this->Auth = new Auth($this->Request);
             $this->Session = Session::GetInstance();
             $this->Cookie = Cookie::GetInstance();
-            $this->Markup = new Markup();
-            $this->Html = new Html($this->data, $this->factory);
             $this->Set = new Set();
 
             // Localization
@@ -318,7 +314,6 @@
         {
             $this->view = $view;
             $this->data = array_merge($this->data, $data);
-            $this->data['html'] = $this->Html;
             $this->data['session'] = $this->Session;
 
             $header = ($this->currentHeader) ? $this->currentHeader : 'Content-type: '.$this->contentType.'; charset='.$this->charset;
@@ -462,25 +457,6 @@
         }
 
         /**
-        * LoadHelper
-        */
-        public function helper()
-        {
-            $nb_arg = func_num_args();
-            if($nb_arg > 0)
-            {
-                for ($i = 0; $i < $nb_arg; $i++)
-                {
-                    try {
-                        $this->find(func_get_arg($i));
-                    } catch(BPException $e) {
-                        echo $e->OutputError();
-                    }
-                }
-            }
-        }
-
-        /**
          * Find
          * @param string $file
          * @param array $data
@@ -509,23 +485,6 @@
             } else {
                 $this->$helper = new $helperClass($data);
             }
-        }
-
-        /**
-         * getArrayKeys
-         * @param array $array
-         */
-        public function getArrayKeys($array)
-        {
-            foreach ($array as $k => $v)
-            {
-                if(is_array($v))
-                    $k = array_keys($v);
-
-                $d[] = $k;
-            }
-
-            return $d;
         }
 
     }
