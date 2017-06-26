@@ -447,13 +447,13 @@ class Controller
         */
     public function model($model)
     {
-        $model_path = APPPATH.'models'.DS.$model.EXT;
+        $model_file = APPPATH.'models'.DS.ucfirst($model).EXT;
 
-        if(file_exists($model_path)) {
-            require_once $model_path;
+        if(file_exists($model_file)) {
+            require_once $model_file;
             return new $model();
         } else {
-            return null;
+            throw new BpException('Try to instanciate not existing '.ucfirst($model).' Model.');
         }
     }
 

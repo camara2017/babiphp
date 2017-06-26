@@ -13,14 +13,12 @@
  * @since         BabiPHP v 0.1
  * @license       http://www.gnu.org/licenses/ GNU License
  *
- *
- * BabiPHP Database Configuration File.
  * 
  * Not edit this file
  *
  */
 
-	use \BabiPHP\Component\Config\Config;
+use \BabiPHP\Component\Config\Config;
 	
 
 /*
@@ -29,25 +27,21 @@
 |--------------------------------------------------------------------------------------------|
 */
 
-	// Databases availables
-	Config::set('databases', array(
-			'local' => array(
-				'driver' 		=> 'mysql',
-				'persistent' 	=> true,
-				'host' 			=> 'localhost',
-				'port' 			=> '3306',
-				'name' 			=> '',
-				'user' 			=> '',
-				'pass' 			=> '',
-				'charset'		=> '',
-				'prefix' 		=> ''
-			)
+// Databases availables
+Config::set('databases', array(
+		'local' => array(
+			'driver' 		=> 'mysql',
+			'persistent' 	=> true,
+			'host' 			=> 'localhost',
+			'port' 			=> '3306',
+			'name' 			=> '',
+			'user' 			=> '',
+			'pass' 			=> '',
+			'charset'		=> 'utf8',
+			'prefix' 		=> ''
 		)
-	);
+	)
+);
 
-	// Default Database
-	Config::set('default_database', 'local');
-	
-//-------------------------------------------------------------------------
-
-?>
+// Default Database
+Config::set('default_database', 'local');

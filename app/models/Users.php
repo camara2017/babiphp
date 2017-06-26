@@ -1,8 +1,19 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 
-    use Base\Users as BaseUsers;
+use BabiPHP\Component\Database\Table;
 
-    class Users extends BaseUsers
+class Users
+{
+    private $db = null;
+
+    public function __construct()
+	{
+		$this->db = new Table('users');
+	}
+
+    function getById($id, $fields = '*')
     {
-        
+        $bind[':id'] = $id;
+        return $this->db->select($fields)->where('id = :id')->bind($bind)->findOne();
     }
+}

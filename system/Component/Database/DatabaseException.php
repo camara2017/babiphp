@@ -19,12 +19,10 @@
  */
 	
     
-	namespace BabiPHP\Component\Database;
+namespace BabiPHP\Component\Database;
 
-	use BabiPHP\Component\Exception\BpException;
+use BabiPHP\Component\Exception\BpException;
 
-	class DatabaseException extends BpException
-	{
-	}
-
-?>
+class DatabaseException extends BpException
+{
+}

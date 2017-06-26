@@ -32,7 +32,7 @@
 		 * BabiPHP Version
 		 * @const string
 		 */
-		const VERSION = '0.8.9-dev';
+		const VERSION = '0.8.10-dev';
 
 		/**
 		 * App Instance

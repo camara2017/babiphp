@@ -438,7 +438,7 @@
                 $url
             );
 
-           return $output;
+            return $output;
         }
 
         private function renderJsonNotFound()
