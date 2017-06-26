@@ -73,12 +73,25 @@
 	}
 
 	/**
-	* create one void class
+	* Permet de créer une class et de la remplir avec un tableau associatif
 	*
 	* @param array
+	*
 	* @return object
 	*/
 	function voidClass($array = [])
+	{
+		return void_class($array);
+	}
+
+	/**
+	* Permet de créer une class et de la remplir avec un tableau associatif
+	*
+	* @param array
+	*
+	* @return object
+	*/
+	function void_class($array = [])
 	{
 		$class = new \stdClass;
 

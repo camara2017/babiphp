@@ -9,6 +9,7 @@
 *
 * @copyright     Copyright (c) BabiPHP. (http://babiphp.org)
 * @link          http://babiphp.org BabiPHP Project
+* @package       system.component.auth
 * @since         BabiPHP v 0.8.9
 * @license       http://www.gnu.org/licenses/ GNU License
 *
@@ -17,31 +18,21 @@
 *
 */
 
-namespace BabiPHP\Component\View\Compilers;
+namespace BabiPHP\Component\Auth;
 
-interface CompilerInterface
+interface AuthenticationInterface
 {
     /**
-     * Get the path to the compiled version of a view.
+     * Permet de vérifier une authentification.
      *
-     * @param  string  $path
-     * @return string
+     * @param string $key
      */
-    public function getCompiledPath($path);
+    public function check();
 
     /**
-     * Determine if the given view is expired.
+     * Réinitialise l'authentification.
      *
-     * @param  string  $path
-     * @return bool
+     * @return mixed
      */
-    public function isExpired($path);
-
-    /**
-     * Compile the view at the given path.
-     *
-     * @param  string  $path
-     * @return void
-     */
-    public function compile($path);
+    public function destroy();
 }

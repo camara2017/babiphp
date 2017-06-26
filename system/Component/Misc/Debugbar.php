@@ -24,7 +24,7 @@
 	namespace BabiPHP\Component\Misc;
 
 	use BabiPHP\Component\Misc\Set;
-	use BabiPHP\Component\Misc\Session;
+	use BabiPHP\Component\Session\Session;
 	use BabiPHP\Component\Config\Config;
 
 	class Debugbar
@@ -33,7 +33,7 @@
         private static $session;
 		private static $McTime;
 		private static $Errors = 0;
-		private static $UserRole = [];
+		private static $userRole = [];
 		private static $messages = [];
 		private static $exceptions = [];
 		private static $queries = [];
@@ -146,15 +146,40 @@
 		private static function Init()
 		{
 			self::$Set = new Set();
-			self::$session = Session::GetInstance();
+			self::$session = Session::getInstance();
 
+			self::setupRoles();
+		}
+
+		private static function setupRoles()
+		{
 			$roles = array(
 	        	'anonym' => 'ROLE_ANONYM',
 	        	'user' => 'ROLE_USER',
 	        	'admin' => 'ROLE_ADMIN',
 	        	'super_admin' => 'ROLE_SUPER_ADMIN'
 	        );
-			self::$UserRole = array_flip($roles);
+			self::$userRole = array_flip($roles);
+
+			return self::$userRole;
+		}
+
+		/**
+		* GetAuth
+		*/
+		private static function getAuth()
+		{
+			$app_name = strtolower(Config::get('name'));
+			$app_name = str_replace(' ', '_', $app_name);
+
+			$app_provider = $app_name.'_auth_providers';
+
+			$_s = self::$session->get($app_provider);
+			$_role = self::$userRole[$_s['role']];
+
+			$_u = '<span class="simptip-position-top simptip-movable simptip-smooth" data-tooltip="Logged as '.$_role.'">';
+			$_u .= '<span class="_bp-bar-badge">'.$_role.'</span></span>';
+			return $_u;;
 		}
 
 		/**
@@ -164,24 +189,6 @@
 		{
 			list($usec, $sec) = explode(" ",microtime());
 			return ((float)$usec + (float)$sec);
-		}
-
-		/**
-		* GetAuth
-		*/
-		private static function getAuth()
-		{
-			$app_name = strtolower(Config::Get('name'));
-			$app_name = str_replace(' ', '_', $app_name);
-
-			$app_provider = $app_name.'_auth_providers';
-
-			$_s = self::$session->get($app_provider);
-			$_role = self::$UserRole[$_s['role']];
-
-			$_u = '<span class="simptip-position-top simptip-movable simptip-smooth" data-tooltip="Logged as '.$_role.'">';
-			$_u .= '<span class="_bp-bar-badge">'.$_role.'</span></span>';
-			return $_u;;
 		}
 
 		private static function getMemoryUsage()

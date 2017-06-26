@@ -24,7 +24,7 @@
 
 		<!-- begin page content -->
 
-		{!! $layout_content !!}
+		{!! view_content() !!}
 
 		<!-- end page content -->
 

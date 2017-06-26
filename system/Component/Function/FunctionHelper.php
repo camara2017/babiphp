@@ -14,14 +14,16 @@
  * @license       http://www.gnu.org/licenses/ GNU License
  */
 
-	use \BabiPHP\Component\Config\Config;
-	use \BabiPHP\Component\Routing\Router;
-    use \BabiPHP\Component\Misc\Debugbar;
-    use \BabiPHP\Component\Date\Moment;
-    use \BabiPHP\Component\Exception\BpException;
+use \BabiPHP\Component\Config\Config;
+use \BabiPHP\Component\Routing\Router;
+use \BabiPHP\Component\Misc\Debugbar;
+use \BabiPHP\Component\Date\Moment;
+use \BabiPHP\Component\View\Template as ViewTemplate;
+use \BabiPHP\Component\Exception\BpException;
 
 
 /* Miscellaneous */
+
 if ( ! function_exists('config'))
 {
 	/**
@@ -161,6 +163,21 @@ if ( ! function_exists('moment'))
 		$m = new Moment($dateTime);
 		Moment::setLocale($locale);
         return $m->format($format);
+	}
+}
+
+/* View */
+
+if ( ! function_exists('view_content'))
+{
+	/**
+	 * Retourne le contenu de la vue courante
+	 *
+	 * @return mixed
+	 */
+	function view_content()
+	{
+		return ViewTemplate::getOutput('view_content');
 	}
 }
 
