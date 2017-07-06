@@ -12,47 +12,41 @@
  * @package       app.controllers
  * @since         BabiPHP v 0.1
  * @license       http://www.gnu.org/licenses/ GNU License
- */
-
-/**
- * BabiPHP Application Main Controller File.
- * 
- * Not delete this file
  *
+ * 
+ * BabiPHP Application Main Controller
  */
 
-    use \BabiPHP\Core\Controller;
+use \BabiPHP\Core\Controller;
 
-    abstract class AppController extends Controller
+abstract class AppController extends Controller
+{
+    function __construct($request, $response)
     {
-        function __construct($request, $response)
-    	{
-    		parent::__construct($request, $response);
+        parent::__construct($request, $response);
 
-            $this->setUserLanguageDomain('home');
-    	}
-
-        function renderError($e, $d)
-        {
-            $this->setLayout('error');
-
-            $d['page'] = voidClass(['title'=>$e->title, 'type'=>'error']);
-            $d['error'] = voidClass(['message' => $e->message]);
-
-            $this->Render('/errors/index', $d);
-        }
-
-        protected function setUserLanguageDomain($domain)
-        {
-            $trans_locale = getBrowserLocale('en_US');
-            $this->Translate->Locale($trans_locale);
-            $this->Translate->Domain($domain);
-        }
-
-        function getJsonResponse()
-        {
-            return ['error'=>false, 'status'=>false, 'message'=>'', 'response'=>null];
-        }
+        $this->setUserLanguageDomain('home');
     }
 
-?>
+    function renderError($e, $d)
+    {
+        $this->setLayout('error');
+
+        $d['page'] = voidClass(['title'=>$e->title, 'type'=>'error']);
+        $d['error'] = voidClass(['message' => $e->message]);
+
+        $this->Render('/errors/index', $d);
+    }
+
+    protected function setUserLanguageDomain($domain)
+    {
+        $trans_locale = getBrowserLocale('en_US');
+        $this->translate->Locale($trans_locale);
+        $this->translate->Domain($domain);
+    }
+
+    function getJsonResponse()
+    {
+        return ['error'=>false, 'status'=>false, 'message'=>'', 'response'=>null];
+    }
+}

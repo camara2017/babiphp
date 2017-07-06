@@ -200,7 +200,7 @@
             }
 
             // vars for debug bar
-            $debug_bar = voidClass([
+            $debug_bar = $this->voidClass([
                 'active' => Debugbar::$activate,
             ]);
 
@@ -273,6 +273,24 @@
             $this->templateHelper->render($templateFile);
 
             return Handler::QUIT;
+        }
+
+        /**
+        * Permet de créer une class et de la remplir avec un tableau associatif
+        *
+        * @param array
+        *
+        * @return object
+        */
+        public function voidClass($array = [])
+        {
+            $class = new \stdClass;
+
+            foreach ($array as $key => $value) {
+                $class->$key = $value;
+            }
+
+            return $class;
         }
 
         /**

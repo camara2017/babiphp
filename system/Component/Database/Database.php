@@ -373,7 +373,8 @@ class Database
 				}
 			}	
 		} catch (PDOException $e) {
-			$this->error = $e;
+			//$this->error = $e;
+			$this->error = $e->getMessage();
 		}
 	}
 

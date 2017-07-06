@@ -12,16 +12,13 @@
  * @package       app.config
  * @since         BabiPHP v 0.1
  * @license       http://www.gnu.org/licenses/ GNU License
- */
-
-/**
- * BabiPHP Routes File.
+ *
  * 
- * Not edit this file
+ * BabiPHP Routes File
  *
  */
 
-	use BabiPHP\Component\Routing\Router;
+use BabiPHP\Component\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +26,6 @@
 |--------------------------------------------------------------------------
 */
 
-	Router::Map('GET|POST', '/', 'home@index', 'home');
-	Router::Map('GET', '/demo', 'home@demo', 'demo');
-	Router::Map('POST', '/ajax', 'home@ajax', 'ajax');
-	
-?>
+Router::Map('GET|POST', '/', 'home@index', 'home');
+Router::Map('GET', '/demo', 'home@demo', 'demo');
+Router::Map('POST', '/ajax', 'home@ajax', 'ajax');

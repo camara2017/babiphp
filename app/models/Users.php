@@ -4,16 +4,21 @@ use BabiPHP\Component\Database\Table;
 
 class Users
 {
-    private $db = null;
+    private $table = null;
 
     public function __construct()
 	{
-		$this->db = new Table('users');
+        $this->table = new Table('users');
 	}
 
     function getById($id, $fields = '*')
     {
         $bind[':id'] = $id;
-        return $this->db->select($fields)->where('id = :id')->bind($bind)->findOne();
+        return $this->table->select($fields)->where('id = :id')->bind($bind)->findOne();
+    }
+
+    function getAll()
+    {
+        return $this->table->select()->limit(5)->find();
     }
 }

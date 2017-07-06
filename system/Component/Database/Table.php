@@ -28,8 +28,24 @@ class Table implements Tableinterface
      */
 	private $database = null;
 
-	public function __construct(string $table)
+	/**
+	 * Constructor
+	 *
+	 * @param string $table
+	 * @param array $config Configuration pour la connexion à la base de donnée
+	 */
+	public function __construct(string $table, array $config = [])
 	{
+		if ($config) {
+			$manager = ConnectionManager::getInstance();
+
+			if (isset($config['data'])) {
+				$manager->addConfiguration($config['name'], $config['data']);
+			}
+
+			$manager->setCurrentConfigName($config['name']);
+		}
+
 		$this->database = new Database($table);
 	}
 

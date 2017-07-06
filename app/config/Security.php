@@ -21,37 +21,34 @@
  *
  */
 
-	use BabiPHP\Component\Config\Security;
+use BabiPHP\Component\Config\Security;
 
 /*
 |--------------------------------------------------------------------------
 | The password encoder Algorythm "default = sha512"
 |--------------------------------------------------------------------------
 */
-	Security::set('Password_encoder', 'sha512');
+Security::set('Password_encoder', 'sha512');
 
 /*
 |--------------------------------------------------------------------------
 | A random string used in security hashing methods
 |--------------------------------------------------------------------------
 */
-	Security::Set('Security_salt', 'DYsfqqghshh5+45sh4h=4h6hykyk--466FFqD8çCOy9Uuçgggf675FHFHxfs2+=ni0FgaC9mi');
+Security::Set('Security_salt', 'DYsfqqghshh5+45sh4h=4h6hykyk--466FFqD8çCOy9Uuçgggf675FHFHxfs2+=ni0FgaC9mi');
 
 /*
 |--------------------------------------------------------------------------
 | A random numeric string (digits only) used to encrypt/decrypt strings.
 |--------------------------------------------------------------------------
 */
-	Security::Set('Security_cipherSeed', '7663464293096559434827935824967473456727');
+Security::Set('Security_cipherSeed', '7663464293096559434827935824967473456727');
 
 /*
 |---------------------------------------------------------------------------------
 | A random string used to create random password with 8 alphanumerical characters.
 |---------------------------------------------------------------------------------
 */
-	Security::Set('Random_string', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
+Security::Set('Random_string', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
 	
 //-------------------------------------------------------------------------
-
-
-?>

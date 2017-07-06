@@ -31,53 +31,132 @@
 	*/
 	class ConnectionManager
 	{
-		private $config;
-		private $driver;
-		private $host;
-		private $port;
+		/**
+		 * Liste des configurations pour se connecter à une base de donnée
+		 *
+		 * @var array
+		 */
+		private $configs = [];
+
+		/**
+		 * Nom de la configuration courante
+		 *
+		 * @var string
+		 */
+		private $current_config_name = '';
+
+		private $driver = 'mysql';
+
+		private $host = 'localhost';
+
+		private $port = '3306';
+
 		private $db;
+
 		private $user;
+
 		private $passwd;
+
+		/**
+		 * Encodage de la base de donnée
+		 *
+		 * @var string
+		 */
 		private $charset = 'utf8';
+
+		/**
+		 * Persistence de la base de donnée
+		 *
+		 * @var boolean
+		 */
 		private $persistent = true;
-		private $prefix;
+
+		/**
+		 * Prefix des tables de la base de donnée
+		 *
+		 * @var string
+		 */
+		private $prefix = '';
 
 		/**
 		* The current connection
-		* @type: \PDO
+		*
+		* @var: \PDO
 		*/
 		private $connection;
 
+		/**
+		 * Instance de la class (Singleton)
+		 *
+		 * @var ConnectionManager
+		 */
 		private static $_instance;
 
+		/**
+		 * Permet de récuperer l'instance la class
+		 *
+		 * @return ConnectionManager
+		 */
 		public static function getInstance()
 		{
-			if (is_null(static::$_instance)) {
-				static::$_instance = new ConnectionManager();
+			if (is_null(self::$_instance)) {
+				self::$_instance = new ConnectionManager();
 			}
 
-			return static::$_instance;
+			return self::$_instance;
 		}
 
-		public function setConfiguration(Array $data)
+		/**
+		 * Permet de définir le nom de la configuration courante
+		 *
+		 * @param string $name
+		 * @return void
+		 */
+		public function setCurrentConfigName(string $name)
 		{
-			$this->config = $data;
-
-			$this->driver = $data['driver'];
-			$this->host = $data['host'];
-			$this->port = $data['port'];
-	        $this->db = $data['name'];
-			$this->user = $data['user'];
-	        $this->passwd = $data['pass'];
-	        $this->port = $data['port'];
-	        $this->charset = $data['charset'];
-	        $this->persistent = $data['persistent'];
-	        $this->prefix = $data['prefix'];
+			$this->current_config_name = $name;
 		}
 
-		public function getConfiguration()
+		/**
+		 * Permet d'ajouter une nouvelle configuration de connection
+		 *
+		 * @param string $name
+		 * @param Array $data
+		 * @return void
+		 */
+		public function addConfiguration(string $name, Array $data)
 		{
-			return $this->config;
+			$this->configs[$name] = $data;
+		}
+
+		/**
+		 * Permet d'ajouter plusieurs configurations de connection
+		 *
+		 * @param Array $config
+		 * @return void
+		 */
+		public function addMultiConfiguration(array $configs)
+		{
+			foreach ($configs as $name => $data) {
+				$this->addConfiguration($name, $data);
+			}
+		}
+
+		/**
+		 * Permet de récuperer une configuration
+		 *
+		 * @param string $name
+		 * @return array
+		 */
+		public function getConfiguration(string $name = null)
+		{
+			if (is_null($name)) {
+				$config = $this->configs[$this->current_config_name];
+			} else {
+				$config = $this->configs[$name];
+			}
+
+			return $config;
 		}
 
 		/**
@@ -86,22 +165,80 @@
 		 */
 		public function getTablePrefix()
 		{
-			return $this->prefix;
+			return $this->configs[$this->current_config_name]['prefix'];
 		}
 
-		
+		/**
+		 * Permet de récuperer le driver de la configuration courante
+		 *
+		 * @return string
+		 */
 		public function getDriver()
 		{
-			return $this->driver;
+			return $this->configs[$this->current_config_name]['driver'];
 		}
 
+		/**
+		 * Permet de récuperer le connection courante
+		 *
+		 * @return ConnectionManager
+		 */
 		public function getConnection()
 		{
 			return ($this->connection instanceof PDO) ? $this->connection : $this->connect();
 		}
 
+		/**
+		 * Permet de définir une configuration pour se connecter à une base de donnée
+		 *
+		 * @param string $name
+		 * @param Array $data
+		 * @return void
+		 */
+		private function setCurrentConfig(string $name)
+		{
+			if (isset($this->configs[$name]))
+			{
+				if (isset($this->configs[$name]['driver'])) {
+					$this->charset = $this->configs[$name]['driver'];
+				}
+
+				if (isset($this->configs[$name]['host'])) {
+					$this->charset = $this->configs[$name]['host'];
+				}
+
+				if (isset($this->configs[$name]['port'])) {
+					$this->charset = $this->configs[$name]['port'];
+				}
+
+				$this->db = $this->configs[$name]['name'];
+				$this->user = $this->configs[$name]['user'];
+				$this->passwd = $this->configs[$name]['pass'];
+				$this->prefix = $this->configs[$name]['prefix'];
+
+				if (isset($this->configs[$name]['charset'])) {
+					$this->charset = $this->configs[$name]['charset'];
+				}
+
+				if (isset($this->configs[$name]['persistent'])) {
+					$this->persistent = $this->configs[$name]['persistent'];
+				}
+
+				$this->setCurrentConfigName($name);
+			} else {
+				throw new DatabaseException('Database configuration with name '.$name.' not set');
+			}
+		}
+
+		/**
+		 * Permet de créer la connection à la base de donnée
+		 *
+		 * @return \PDO
+		 */
 		private function connect()
 		{
+			$this->setCurrentConfig($this->current_config_name);
+
 			$options = array(
 				PDO::ATTR_PERSISTENT => $this->persistent,
 				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

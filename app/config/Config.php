@@ -12,39 +12,36 @@
  * @package       app.config
  * @since         BabiPHP v 0.1
  * @license       http://www.gnu.org/licenses/ GNU License
- */
-
-/**
- * BabiPHP Application Configuration File.
+ *
  * 
- * Not edit this file
+ * BabiPHP Application Configuration File
  *
  */
 
-	use \BabiPHP\Component\Config\Config;
-	
+use \BabiPHP\Component\Config\Config;
+
 /*
 |--------------------------------------------------------------------------
 | Site Title
 |--------------------------------------------------------------------------
 */
-	Config::set('name', 'BabiPHP');
+Config::set('name', 'BabiPHP');
 
 /*
 |--------------------------------------------------------------------------
 | Site Description
 |--------------------------------------------------------------------------
 */
-	Config::set('description', 'The flexible PHP Framework');
-	
+Config::set('description', 'The flexible PHP Framework');
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL (*) without scheme (http:// or https://)
 |--------------------------------------------------------------------------
 */
 
-	Config::set('base_url', 'localhost/babiphp/');
-	
+Config::set('base_url', 'localhost/babiphp/');
+
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
@@ -61,121 +58,121 @@
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
 
-	Config::set('uri_protocol', 'QUERY_STRING');
-	
+Config::set('uri_protocol', 'QUERY_STRING');
+
 /*
 |--------------------------------------------------------------------------
 | URL suffix
 |--------------------------------------------------------------------------
 */
 
-	Config::set('enable_suffix', true);
+Config::set('enable_suffix', true);
 
-	Config::set('url_suffix', '.html');
-	
+Config::set('url_suffix', '.html');
+
 /*
 |--------------------------------------------------------------------------
 | Enable/Disable System Hooks
 |--------------------------------------------------------------------------
 */
 
-	Config::set('enable_hooks', true);
-	
+Config::set('enable_hooks', true);
+
 /*
 |--------------------------------------------------------------------------
 | Composer auto-loading
 |--------------------------------------------------------------------------
 */
 
-	Config::set('composer_autoload', false);
-	
+Config::set('composer_autoload', false);
+
 /*
 |--------------------------------------------------------------------------
 | Homepage controller / Default = 'home'
 |--------------------------------------------------------------------------
 */
-	Config::set('index_controller', 'home');
-	
+Config::set('index_controller', 'home');
+
 /*
 |--------------------------------------------------------------------------
 | Site Language / Default = 'en_US'
 |--------------------------------------------------------------------------
 */
-	Config::set('lang', 'en_US');
+Config::set('lang', 'en_US');
 
 /*
 |--------------------------------------------------------------------------
 | Site Character Set / Default = 'utf-8'
 |--------------------------------------------------------------------------
 */
-	Config::set('charset', 'utf-8');
-	
+Config::set('charset', 'utf-8');
+
 /*
 |--------------------------------------------------------------------------
 | Site Template / Default = 'default'
 |--------------------------------------------------------------------------
 */
-	Config::set('template', 'default');
-	
+Config::set('template', 'default');
+
 /*
 |--------------------------------------------------------------------------
 | Error Handling & Templating
 |--------------------------------------------------------------------------
 */
 
-	Config::set('handled_errors', false);
+Config::set('handled_errors', false);
 
-	Config::set('template_error', [
-		'layout' => 'error', 
-		'view' => [
-			'error_app' => 'errors/app',
-			'error_403' => 'errors/403',
-			'error_404' => 'errors/404',
-			'error_410' => 'errors/410'
-		]
-	]);
+Config::set('template_error', [
+	'layout' => 'error', 
+	'view' => [
+		'error_app' => 'errors/app',
+		'error_403' => 'errors/403',
+		'error_404' => 'errors/404',
+		'error_410' => 'errors/410'
+	]
+]);
 
 /*
 |--------------------------------------------------------------------------
 | View Extension / Default = 'tpl'
 |--------------------------------------------------------------------------
 */
-	Config::set('view_ext', ['tpl', 'layout.tpl']);
+Config::set('view_ext', ['tpl', 'layout.tpl']);
 
 /*
 |--------------------------------------------------------------------------
 | BabiPHP Application multilanguage
 |--------------------------------------------------------------------------
 */
-	Config::set('localization', true);
+Config::set('localization', true);
 
-	Config::set('locale_default', 'en_US');
+Config::set('locale_default', 'en_US');
 
-	Config::set('locale_supported', ['en_US', 'fr_FR', 'fr_CI']);
+Config::set('locale_supported', ['en_US', 'fr_FR', 'fr_CI']);
 
-	Config::set('locale_encoding', 'UTF-8');
-	
+Config::set('locale_encoding', 'UTF-8');
+
 /*
 |--------------------------------------------------------------------------
 | BabiPHP Application Flash Templates
 |--------------------------------------------------------------------------
 */
-	Config::set('flash_template', [
-		'default' => '<div class="alert alert-{{type}} alert-navbar alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<div class="message">{{icon}} {{message}}</div>
-			</div>',
-		'attached' => '<div class="abs-notifier abs-notifier-{{type}}">
-                <button type="button" class="close dismiss" data-dismiss="abs-notifier" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="icon">{{icon}}</div>
-                <div class="message">{{message}}</div>
-            </div>'
-	]);
-	
+Config::set('flash_template', [
+	'default' => '<div class="alert alert-{{type}} alert-navbar alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<div class="message">{{icon}} {{message}}</div>
+		</div>',
+	'attached' => '<div class="abs-notifier abs-notifier-{{type}}">
+			<button type="button" class="close dismiss" data-dismiss="abs-notifier" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<div class="icon">{{icon}}</div>
+			<div class="message">{{message}}</div>
+		</div>'
+]);
+
 //-------------------------------------------------------------------------
 
 /*
@@ -183,10 +180,10 @@
 | BabiPHP Debug Extension / Default = true
 |--------------------------------------------------------------------------
 */
-	Config::set('disable_auto_render', array(
-		'posts#updater/updater_attach',
-		'users#profil/message'
-	));
+Config::set('disable_auto_render', array(
+	'posts#updater/updater_attach',
+	'users#profil/message'
+));
 
 /*
 | -------------------------------------------------------------------
@@ -195,25 +192,25 @@
 | Prototype: array('functions');
 */
 
-	Config::set('helpers', array('functions'));
+Config::set('helpers', array('functions'));
 
 /*
 |--------------------------------------------------------------------------
 | The login setting
 |--------------------------------------------------------------------------
 */
-	Config::Set('login_form', 'auth#login');
+Config::Set('login_form', 'auth#login');
 
 /*
 |--------------------------------------------------------------------------
 | A random string used in security hashing methods
 |--------------------------------------------------------------------------
 */
-	Config::set('access_control', array(
-		'ROLE_ANONYM' => '*',
-		'ROLE_USER' => 'game',
-		'ROLE_ADMIN' => 'admin|cockpit'
-	));
+Config::set('access_control', array(
+	'ROLE_ANONYM' => '*',
+	'ROLE_USER' => 'game',
+	'ROLE_ADMIN' => 'admin|cockpit'
+));
 
 /*
 |--------------------------------------------------------------------------
@@ -222,36 +219,34 @@
 | ROLE_ANONYM, ROLE_USER, ROLE_ADMIN
 |--------------------------------------------------------------------------
 */
-	Config::set('admin_role', array('ROLE_ADMIN'));
-	
+Config::set('admin_role', array('ROLE_ADMIN'));
+
 /*
 |--------------------------------------------------------------------------
 | Directory secured bey firewall | example ['application', 'system', 'vendor']
 |--------------------------------------------------------------------------
 */
-	Config::set('system_firewall', ['app', 'system', 'public', 'vendor']);
+Config::set('system_firewall', ['app', 'system', 'public', 'vendor']);
 
 /*
 |--------------------------------------------------------------------------
 | BabiPHP Application environment ('prod' or 'dev') @default: 'dev'
 |--------------------------------------------------------------------------
 */
-	Config::set('environment', 'dev');
+Config::set('environment', 'dev');
 
 /*
 |--------------------------------------------------------------------------
 | BabiPHP Application display error details (true or false) @default: false
 |--------------------------------------------------------------------------
 */
-	Config::set('display_error_details', true);
+Config::set('display_error_details', true);
 
 /*
 |--------------------------------------------------------------------------
 | BabiPHP Application maintenance state (true or false) @default: false
 |--------------------------------------------------------------------------
 */
-	Config::set('maintenance', false);
-	
-//-------------------------------------------------------------------------
+Config::set('maintenance', false);
 
-?>
+//-------------------------------------------------------------------------

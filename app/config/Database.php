@@ -12,10 +12,6 @@
  * @package       app.config
  * @since         BabiPHP v 0.1
  * @license       http://www.gnu.org/licenses/ GNU License
- *
- * 
- * Not edit this file
- *
  */
 
 use \BabiPHP\Component\Config\Config;

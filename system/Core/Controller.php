@@ -19,20 +19,22 @@
 
 namespace BabiPHP\Core;
 
-use \BabiPHP\Component\Config\Config;
-use \BabiPHP\Component\Exception\BpException;
-use \BabiPHP\Component\Http\Response;
-use \BabiPHP\Component\Translation\Localization;
-use \BabiPHP\Component\Session\Session;
-use \BabiPHP\Component\Auth\Authentication;
-use \BabiPHP\Component\Misc\Cookie;
-use \BabiPHP\Component\Misc\Set;
-use \BabiPHP\Component\Misc\Debugbar;
-use \BabiPHP\Component\View\Compilers\BladeCompiler as ViewCompiler;
-use \BabiPHP\Component\View\Engines\CompilerEngine as ViewCompilerEngine;
-use \BabiPHP\Component\View\FileViewFinder as ViewFinder;
-use \BabiPHP\Component\View\Factory as ViewFactory;
-use \BabiPHP\Component\View\Template as ViewTemplate;
+use BabiPHP\Component\Config\Config;
+use BabiPHP\Component\Exception\BpException;
+use BabiPHP\Component\Http\Response;
+use BabiPHP\Component\Translation\Localization;
+use BabiPHP\Component\Session\Session;
+use BabiPHP\Component\Auth\Authentication;
+use BabiPHP\Component\Misc\Cookie;
+use BabiPHP\Component\Misc\Set;
+use BabiPHP\Component\Misc\Debugbar;
+use BabiPHP\Component\View\Compilers\BladeCompiler as ViewCompiler;
+use BabiPHP\Component\View\Compilers\BladeDirectivesExtended;
+use BabiPHP\Component\View\Engines\CompilerEngine as ViewCompilerEngine;
+use BabiPHP\Component\View\FileViewFinder as ViewFinder;
+use BabiPHP\Component\View\Factory as ViewFactory;
+use BabiPHP\Component\View\Template as ViewTemplate;
+use BabiPHP\Component\Routing\Router;
 
 class Controller
 {
@@ -121,32 +123,40 @@ class Controller
     private $currentHeader = '';
 
     /**
-        * current request instance.
-        * 
-        * @var \BabiPHP\Component\Http\Request
-        */
-    protected $Request;
+    * current request instance.
+    * 
+    * @var \BabiPHP\Component\Http\Request
+    */
+    protected $request;
 
     /**
-        * current responce instance.
-        * 
-        * @var \BabiPHP\Component\Http\Response
-        */
+    * current responce instance.
+    * 
+    * @var \BabiPHP\Component\Http\Response
+    */
     protected $Response;
 
+    /**
+    * @var \BabiPHP\Component\Routing\Router
+    */
+    protected $router;
     
     /**
-        * Controller Constructor
-        * @param $request
-        * @param $response
-        */
+     * Constructor
+     *
+     * @param Request $request
+     * @param Response $response
+     */
     public function __construct($request, $response)
     {
         // Set request
-        $this->Request = $request;
+        $this->request = $request;
 
         // set response
-        $this->Response = $response;
+        $this->response = $response;
+
+        // Set router
+        $this->router = Router::getInstance();
 
         // Set page charset
         $this->charset = Config::get('charset');
@@ -161,10 +171,20 @@ class Controller
         $this->layout = APP_TEMPLATE;
 
         // Set View extension
-        $this->viewExt = Config::Get('view_ext');
+        $this->viewExt = Config::get('view_ext');
 
-        /* View compiler*/
-        $this->compiler = new ViewCompiler(APPPATH.'cache'.DS.'view');
+        // View cache path
+        $view_cache_path = APPPATH.'cache'.DS.'view';
+
+        // Create view cache path if not exist
+        if (!is_dir($view_cache_path)) {
+            mkdir($view_cache_path, 0777);
+        }
+
+        /* View compiler & directives extended */
+        $this->compiler = new ViewCompiler($view_cache_path);
+        $directives_extended = new BladeDirectivesExtended($this->compiler);
+        $directives_extended->boot();
 
         // View finder
         $this->finder = new ViewFinder([$this->viewPath, $this->templatePath]);
@@ -175,15 +195,15 @@ class Controller
         $this->factory = new ViewFactory($engine, $this->finder);
 
         // Initialization
-        $this->Auth = new Authentication($this->Request);
-        $this->Session = Session::GetInstance();
-        $this->Cookie = Cookie::GetInstance();
-        $this->Set = new Set();
+        $this->auth = new Authentication($this->request);
+        $this->session = Session::GetInstance();
+        $this->cookie = Cookie::GetInstance();
+        $this->set = new Set();
 
         // Localization
         if(Config::get('localization') === true) {
-            $this->Translate = Localization::getInstance();
-            $this->Translate->Setup();
+            $this->translate = Localization::getInstance();
+            $this->translate->Setup();
         }
 
         // Include the accesscontrol module
@@ -196,10 +216,11 @@ class Controller
     }
 
     /**
-        * setContentType
-        * @param string $value
-        * @return $this
-        */
+     * Permet de définir l'entête de la page demandée 
+     *
+     * @param string $header
+     * @return this
+     */
     public function setHeader($header)
     {
         if(is_string($header)) {
@@ -212,11 +233,12 @@ class Controller
     }
 
     /**
-        * setContentType
-        * @param string $value
-        * @return $this
-        */
-    public function setContentType($value)
+     * Permet de définir le type de contenu
+     *
+     * @param string $value
+     * @return Controller
+     */
+    public function setContentType(string $value)
     {
         if(is_string($value)) {
             $this->contentType = $value;
@@ -228,11 +250,12 @@ class Controller
     }
 
     /**
-        * setCharset
-        * @param string $charset
-        * @return $this
-        */
-    public function setCharset($charset)
+     * Permet de définir l'encodage de l'application
+     *
+     * @param string $charset
+     * @return Controller
+     */
+    public function setCharset(string $charset)
     {
         if(is_string($charset)) {
             $this->charset = $charset;
@@ -244,11 +267,12 @@ class Controller
     }
 
     /**
-        * setLayout
-        * @param string $layout
-        * @return $this
-        */
-    public function setLayout($layout)
+     * Permet de définir le template à utiliser
+     *
+     * @param string $layout
+     * @return Controller
+     */
+    public function setTemplate(string $layout)
     {
         $files = $this->finder->getFilesystem();
 
@@ -262,11 +286,12 @@ class Controller
     }
 
     /**
-        * settemplatePath
-        * @param string $path
-        * @return $this
-        */
-    public function settemplatePath($path)
+     * Permet de définir le repertoire des Templates
+     *
+     * @param string $path
+     * @return Controller
+     */
+    public function setTemplatePath(string $path)
     {
         $path = trim($path, '/');
 
@@ -280,11 +305,13 @@ class Controller
     }
 
     /**
-    * share the variables into view
-    * @param array
-    * @return $this
-    */
-    public function share($key, $value = null)
+     * Permet de partager des variables avec la vue
+     *
+     * @param string $key
+     * @param mixed $value
+     * @return Controller
+     */
+    public function share(string $key, $value = null)
     {
         if (is_array($key)) {
             $this->data = array_merge($this->data, $key);
@@ -304,17 +331,17 @@ class Controller
     }
 
     /**
-        * Get the evaluated view contents for the given view.
-        *
-        * @param  string  $view
-        * @param  array   $data
-        * @return View
-        */
-    public function make($view, $data = [])
+     * Permet de générer la page demandée
+     *
+     * @param string $view
+     * @param array $data
+     * @return void
+     */
+    public function make(string $view, array $data = [])
     {
         $this->view = $view;
         $this->data = array_merge($this->data, $data);
-        $this->data['session'] = $this->Session;
+        $this->data['session'] = $this->session;
 
         $header = ($this->currentHeader) ? $this->currentHeader : 'Content-type: '.$this->contentType.'; charset='.$this->charset;
         $content = $this->factory->make($this->view, $this->data)->render();
@@ -331,7 +358,7 @@ class Controller
         * @param  array $data
         * @return mixed
         */
-    public function getView($view, $data = [])
+    public function getView(string $view, array $data = [])
     {
         $exist = false;
 
@@ -347,13 +374,13 @@ class Controller
     }
 
     /**
-        * Register a handler for custom directives.
-        *
-        * @param  string  $name
-        * @param  callable  $handler
-        * @return void
-        */
-    public function addViewDirective($name , callable $handler)
+     * Register a handler for custom directives.
+     *
+     * @param  string $name
+     * @param  callable $handler
+     * @return void
+     */
+    public function addViewDirective(string $name , callable $handler)
     {
         $this->compiler->directive($name, $handler);
     }
@@ -382,7 +409,7 @@ class Controller
     public function jsonRender($data)
     {
         if(is_array($data)) {
-            echo $this->Response->jsonEncode($data);
+            echo $this->response->jsonEncode($data);
         } else {
             Debugbar::addError('JsonRender value "'.$data.'" is not valid, should be an array');
             echo json_encode(null);
@@ -390,10 +417,11 @@ class Controller
     }
 
     /**
-    * setAutoRender
-    * @param boolean $value
-    */
-    public function setAutoRender($value)
+     * setAutoRender
+     * 
+     * @param boolean $value
+     */
+    public function setAutoRender(bool $value)
     {
         if(is_bool($value)) {
             $this->autoRender = $value;
@@ -403,37 +431,38 @@ class Controller
     }
 
     /**
-        * header
-        * @param string $header
-        */
-    public function header($header)
+     * header
+     * 
+     * @param string $header
+     */
+    public function header(string $header)
     {
-        $this->Response->header($header);
+        $this->response->header($header);
     }
 
     /**
-        * Redirects the request to the current URL
-        *
-        * @return ServiceProvider
-        */
+     * Redirects the request to the current URL
+     *
+     * @return Controller
+     */
     public function refresh()
     {
-        $this->Response->redirect($this->Request->uri());
+        $this->response->redirect($this->request->uri());
 
         return $this;
     }
 
     /**
-        * Redirects the request back to the referrer
-        *
-        * @return ServiceProvider
-        */
+     * Redirects the request back to the referrer
+     *
+     * @return Controller
+     */
     public function back()
     {
-        $referer = $this->Request->server()->get('HTTP_REFERER');
+        $referer = $this->request->server()->get('HTTP_REFERER');
 
         if (null !== $referer) {
-            $this->Response->redirect($referer);
+            $this->response->redirect($referer);
         } else {
             $this->refresh();
         }
@@ -442,10 +471,11 @@ class Controller
     }
 
     /**
-        * Model
-        * @param string $model
-        */
-    public function model($model)
+     * Permet de récuperer un model
+     * 
+     * @param string $model
+     */
+    public function model(string $model)
     {
         $model_file = APPPATH.'models'.DS.ucfirst($model).EXT;
 
@@ -458,11 +488,13 @@ class Controller
     }
 
     /**
-        * Find
-        * @param string $file
-        * @param array $data
-        */
-    private function find($file, $data = null, $return = false)
+     * Find
+     * 
+     * @param string $file
+     * @param array $data
+     * @param bool $return
+     */
+    private function find(string $file, $data = null, $return = false)
     {
         $helper = ucfirst(strtolower($file));
         $file = $helper.EXT;
@@ -487,5 +519,4 @@ class Controller
             $this->$helper = new $helperClass($data);
         }
     }
-
 }
