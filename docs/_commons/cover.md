@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 <!--![logo](_medias/php_logo_text.svg)-->
-<p align="center"><img src="../_medias/logo-babiphp-text-banner.png" height="100"></p>
+<p align="center"><img src="/docs/_medias/logo-babiphp-text-banner.png" height="100"></p>
 
 # BabiPHP <small>0.8.10-dev</small>
 
