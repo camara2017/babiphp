@@ -1,4 +1,4 @@
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/PHP_Logo%2C_text_only.svg" width="150"></p>
+<p align="center"><img src="docs/_medias/logo-babiphp-text-banner.png" height="100"></p>
 
 <p align="center">The flexible PHP Framework</p>
 
