@@ -11,6 +11,6 @@
 - Une interface simple et une structure logique,
 - Accessible, mais puissant
 
-[GitHub](https://github.com/lambirou/lambirou/)
+[GitHub](https://github.com/lambirou/babiphp/)
 [Get Started](#qu39est-ce-que-babiphp)
 [Télécharger](https://github.com/lambirou/babiphp/archive/master.zip)
