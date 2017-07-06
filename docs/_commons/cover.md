@@ -1,8 +1,9 @@
 <!-- _coverpage.md -->
 
-![logo](_medias/logo-laravel.svg)
+<!--![logo](_medias/php_logo_text.svg)-->
+<p align="center"><img src="../_medias/php_logo_text.svg" width="150"></p>
 
-# BabiPHP <small>0.8.9-dev</small>
+# BabiPHP <small>0.8.10-dev</small>
 
 > The flexible PHP Framework.
 

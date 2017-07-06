@@ -6,13 +6,14 @@ BabiPHP est un Framework de développement d'applications - un <i>toolkit</i> (t
 
 ## Exigences du serveur
 
-La version 5.6.4 ou plus récente de PHP est recommandée.
+- La version 5.6.4 ou plus récente de PHP est recommandée.
+- Le mod_rewrite d'apache
 
 <br>
 
 ## Installation
 
-#### Installer via composer:
+<!--#### Installer via composer:
 Première étape:
 
 ```
@@ -30,14 +31,14 @@ RewriteRule (.*) vendor/lambirou/babiphp/$1 [L]
 
 </IfModule>
 ```
-Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossier <i>vendor/lambirou/babiphp/</i> à la racine de votre projet et de supprimer tous les fichiers et dossiers déjà présent (y compris le fichier <i>.htaccess</i> que vous créer précédement).
+Pour plus de simplicité nous vous recommandons de déplacer le contenu du dossier <i>vendor/lambirou/babiphp/</i> à la racine de votre projet et de supprimer tous les fichiers et dossiers déjà présent (y compris le fichier <i>.htaccess</i> que vous créer précédement).-->
 
 #### Installation manuelle:
 
 <ol>
 <li>Téléchargez l'archive de <a href="https://github.com/lambirou/babiphp/archive/master.zip">BabiPHP</a>.</li>
 <li>Décompressez le paquet.</li>
-<li>Téléchargez les dossiers et les fichiers de l'archive sur votre projet.</li>
+<li>Téléchargez les dossiers et les fichiers de l'archive à la racine de votre projet.</li>
 <li>Ouvrez le fichier <i>app/config/Config.php</i> avec un éditeur de texte et définissez votre URL de base.</li>
 <li>Si vous avez l'intention d'utiliser un chiffrement ou de gérer des utilisateurs, définissez votre clé de cryptage en éditant le fichier <i>app/config/Security.php</i>.</li>
 <li>Si vous avez l'intention d'utiliser une base de données, ouvrez le fichier <i>app/config/Database.php</i> avec un éditeur de texte et définissez les paramètres de votre base de données.</li>
