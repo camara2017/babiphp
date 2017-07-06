@@ -1,2 +1,3 @@
 /.vscode/*
+/app/cache/view/*
 public/robots.txt
