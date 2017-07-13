@@ -9,19 +9,27 @@
 *
 * @copyright     Copyright (c) BabiPHP. (http://babiphp.org)
 * @link          http://babiphp.org BabiPHP Project
-* @since         BabiPHP v 0.1 (Simple file before v 0.7.5)
-* @license       http://www.gnu.org/licenses/ GNU License
+* @since         BabiPHP v 0.1
+* @license       MIT
 */
 
-    use BabiPHP\Core\Application;
+use BabiPHP\Core\Application;
 
-    require_once __DIR__.'/../system/Bootstrap.php';
+// Show warning if a PHP version below 5.6.0 is used, this has to happen here
+// because Application.php will already use 5.6 syntax.
+if (version_compare(PHP_VERSION, '5.6.0') === -1) {
+	echo 'This version of BabiPHP requires at least PHP 5.6.0<br/>';
+	echo 'You are currently running ' . PHP_VERSION . '. Please update your PHP version.';
+	return;
+}
 
-	// register autoloader class
-	Application::registerAutoloader();
+require_once __DIR__.'/../system/Bootstrap.php';
 
-	// Instantiate a BabiPHP application
-	$app = new Application();
+// register autoloader class
+Application::registerAutoloader();
 
-	// Run application
-	$app->run();
+// Instantiate a BabiPHP application
+$app = new Application();
+
+// Run application
+$app->run();

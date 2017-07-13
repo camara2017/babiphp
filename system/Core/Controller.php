@@ -276,7 +276,7 @@ class Controller
     {
         $files = $this->finder->getFilesystem();
 
-        if($files->exists(APPPATH.'layout/'.$layout.'.layout.tpl')) {
+        if($files->exists($this->templatePath.'/'.$layout.'.layout.tpl')) {
             $this->layout = $layout;
         } else {
             Debugbar::addError('This layout "'.$layout.'" does not exist');

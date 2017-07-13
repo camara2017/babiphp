@@ -18,52 +18,52 @@
 *
 */
 
-	if (!defined('DS')) {
-		define('DS', DIRECTORY_SEPARATOR);
-	}
+if (!defined('DS')) {
+	define('DS', DIRECTORY_SEPARATOR);
+}
 
-	if (!defined('ROOT')) {
-		define('ROOT', dirname(dirname(__FILE__)));
-	}
+if (!defined('ROOT')) {
+	define('ROOT', dirname(dirname(__FILE__)));
+}
 
-	// system folder
-	$system_path = 'system';
+// system folder
+$system_path = 'system';
 
-	// application folder
-	$app_folder = 'app';
+// application folder
+$app_folder = 'app';
 
-	// assets folder
-	$asset_folder = 'public';
+// assets folder
+$asset_folder = 'public';
 
-	// Is the system path correct?
-	if ( ! is_dir(ROOT. DS . $system_path)) {
-		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-	}
+// Is the system path correct?
+if ( ! is_dir(ROOT. DS . $system_path)) {
+	exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+}
 
-	// Path to the system folder
-	define('BASEPATH', ROOT.DS.$system_path.DS);
+// Path to the system folder
+define('BASEPATH', ROOT.DS.$system_path.DS);
 
-	// The path to the "application" folder
-	if ( !is_dir(ROOT. DS . $app_folder) ) {
-		exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
-	}
-	
-	// Path to the application folder
-	define('APPPATH', ROOT.DS.$app_folder.DS);
+// The path to the "application" folder
+if ( !is_dir(ROOT.DS.$app_folder) ) {
+	exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+}
 
-	// The path to the "assets" folder
-	if ( !is_dir(ROOT. DS . $asset_folder) ) {
-		exit('Your assets folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF);
-	}
-	
-	// Path to the assets folder
-	define('WWW_ROOT', '/'.$asset_folder.'/');
+// Path to the application folder
+define('APPPATH', ROOT.DS.$app_folder.DS);
 
-	// Path to the temporary files directory
-	define('CORE', BASEPATH.'Core'.DS);
+// The path to the "assets" folder
+if ( !is_dir(ROOT.DS.$asset_folder) ) {
+	exit('Your assets folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF);
+}
 
-	// The PHP file extension
-	define('EXT', '.php');
+// Path to the assets folder
+define('WWW_ROOT', '/'.$asset_folder.'/');
 
-	// Include application core
-	require_once CORE.'Application'.EXT;
+// Path to the temporary files directory
+define('CORE', BASEPATH.'Core'.DS);
+
+// The PHP file extension
+define('EXT', '.php');
+
+// Include application core
+require_once CORE.'Application'.EXT;
